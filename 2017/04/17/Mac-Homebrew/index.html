@@ -13,7 +13,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Warning: /usr/local/bin is not in your PATH.</div></pre></td></tr></table></figure>
 <p>提示我目录 <code>/usr/local/bin</code> 没有在PATH这个环境变量里。</p>
 <hr>
-<h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>我查了资料 <a href="http://jingyan.baidu.com/article/d2b1d1029c1ea65c7e37d4c9.html，按照上面的步骤做了之后，发现任何的命令都执行不了，`ls" target="_blank" rel="external">http://jingyan.baidu.com/article/d2b1d1029c1ea65c7e37d4c9.html，按照上面的步骤做了之后，发现任何的命令都执行不了，`ls</a> -l` 都无法执行！</p>
+<h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>我查了资料 <a href="http://jingyan.baidu.com/article/d2b1d1029c1ea65c7e37d4c9.html" target="_blank" rel="external">http://jingyan.baidu.com/article/d2b1d1029c1ea65c7e37d4c9.html</a> ，按照上面的步骤做了之后，发现任何的命令都执行不了，<code>ls -l</code> 都无法执行！</p>
 <p>后来 <a href="http://blog.csdn.net/weichuang_1/article/details/47679465" target="_blank" rel="external">Mac的控制台命令无法使用command not found</a> 按照这篇博客</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin</div><div class="line"><span class="built_in">cd</span> ~/</div><div class="line">touch .bash_profile</div><div class="line">open .bash_profile</div></pre></td></tr></table></figure>
 <p>这样就打开了一个记事本，会显示你之前配置过的path，修改记事本或者不修改(建议可以把配置环境变量的语句写在里面)</p>
