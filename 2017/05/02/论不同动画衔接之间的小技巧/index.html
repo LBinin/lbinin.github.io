@@ -22,7 +22,7 @@
 <ol>
 <li>用js控制 <strong>操作之前</strong> 的动画，css中用transition实现 <strong>操作之前</strong> 的动画的 <code>duration</code></li>
 <li>操作后用 <strong>css伪元素</strong> 控制新的 <code>duration</code> 和新的终点属性，记得要用 <code>!important</code> 让它覆盖js控制的样式</li>
-<li>鼠标离开后还可以加上回弹的塞贝尔曲线如 <code>0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)</code> 让用户感觉更有活力</li>
+<li>鼠标离开前加上塞贝尔曲线 <code>cubic-bezier(0.65, 0.05, 0.36, 1)</code>，鼠标离开后还可以加上回弹效果 <code>0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)</code> 会有一种难以合拢，一松开就回弹的效果，让用户感觉更有活力</li>
 </ol>
 <p>一个简单的动画衔接就是这样，一些小技巧没什么多深的知识点也说不上有非常大的作用，因为对于我而言用户体验非常重要，这一点小细节可以看出作者的认真。希望日后可以用到自己的实践中。</p>
 <p>记录于 2017-05-02 17:38</p>
