@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-02T05:47:09.000Z</updated>
+  <updated>2017-05-02T05:51:34.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,18 +20,18 @@
     <link href="http://yoursite.com/2017/05/02/HelloBlog/"/>
     <id>http://yoursite.com/2017/05/02/HelloBlog/</id>
     <published>2017-05-02T05:47:08.000Z</published>
-    <updated>2017-05-02T05:47:09.000Z</updated>
+    <updated>2017-05-02T05:51:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p>大家好！我胡汉三又回来啦！</p>
-<p><img src="/2017/05/02/HelloBlog/back.jpg&quot;" alt="我回来了!"></p>
+    <content type="html"><![CDATA[<p>大家好！我胡汉三又回来啦~</p>
+<p><img src="/2017/05/02/HelloBlog/back.jpg" alt="我回来了!"></p>
 <a id="more"></a>
 <p>经过一段时间的折腾终于稳定好了自己的服务器，也搭建好了Hexo接下来就是把之前的文章迁移过来然后就安心的写自己的博客啦~</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;大家好！我胡汉三又回来啦！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2017/05/02/HelloBlog/back.jpg&amp;quot;&quot; alt=&quot;我回来了!&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;大家好！我胡汉三又回来啦~&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2017/05/02/HelloBlog/back.jpg&quot; alt=&quot;我回来了!&quot;&gt;&lt;/p&gt;
     
     </summary>
     
