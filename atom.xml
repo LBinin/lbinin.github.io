@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2017-05-02T06:09:10.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://www.lbinin.com/"/>
+  <updated>2017-05-02T05:51:34.000Z</updated>
+  <id>http://www.lbinin.com/</id>
   
   <author>
     <name>Linbin</name>
@@ -16,11 +16,506 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>哇我回来啦</title>
+    <link href="http://www.lbinin.com/2017/05/02/HelloBlog/"/>
+    <id>http://www.lbinin.com/2017/05/02/HelloBlog/</id>
+    <published>2017-05-02T05:47:08.000Z</published>
+    <updated>2017-05-02T05:51:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>大家好！我胡汉三又回来啦~</p>
+<p><img src="/2017/05/02/HelloBlog/back.jpg" alt="我回来了!"></p>
+<a id="more"></a>
+<p>经过一段时间的折腾终于稳定好了自己的服务器，也搭建好了Hexo接下来就是把之前的文章迁移过来然后就安心的写自己的博客啦~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大家好！我胡汉三又回来啦~&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2017/05/02/HelloBlog/back.jpg&quot; alt=&quot;我回来了!&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂记" scheme="http://www.lbinin.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac添加环境变量及Homebrew的安装</title>
+    <link href="http://www.lbinin.com/2017/04/17/Mac-Homebrew/"/>
+    <id>http://www.lbinin.com/2017/04/17/Mac-Homebrew/</id>
+    <published>2017-04-17T15:03:00.000Z</published>
+    <updated>2017-05-02T07:15:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天在安装 <strong><code>Homebrew</code></strong> 的时候遇到一些小插曲特此记录一下~</p>
+<p>执行 <a href="http://docs.brew.sh/" target="_blank" rel="external">Homebrew</a> 官网提供的安装语句的时候</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LBinindeMacBook-Pro:~ abc1$ ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div></pre></td></tr></table></figure>
+<p>出现以下提示信息</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">==&gt; This script will install:</div><div class="line">/usr/<span class="built_in">local</span>/bin/brew</div><div class="line">/usr/<span class="built_in">local</span>/share/doc/homebrew</div><div class="line">/usr/<span class="built_in">local</span>/share/man/man1/brew.1</div><div class="line">/usr/<span class="built_in">local</span>/share/zsh/site-functions/_brew</div><div class="line">/usr/<span class="built_in">local</span>/etc/bash_completion.d/brew</div><div class="line">/usr/<span class="built_in">local</span>/Homebrew</div><div class="line"></div><div class="line">Press RETURN to <span class="built_in">continue</span> or any other key to abort</div><div class="line">==&gt; /usr/bin/sudo /bin/mkdir -p /Library/Caches/Homebrew</div><div class="line">Password:</div><div class="line">==&gt; /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew</div><div class="line">==&gt; /usr/bin/sudo /usr/sbin/chown abc1 /Library/Caches/Homebrew</div><div class="line">==&gt; Downloading and installing Homebrew...</div><div class="line">remote: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0</div><div class="line">HEAD is now at 02f0189 Merge pull request <span class="comment">#2483 from MikeMcQuaid/audit-no-devel-version-alias</span></div><div class="line">==&gt; Cleaning up /Library/Caches/Homebrew...</div><div class="line">==&gt; Migrating /Library/Caches/Homebrew to /Users/abc1/Library/Caches/Homebrew...</div><div class="line">==&gt; Deleting /Library/Caches/Homebrew...</div><div class="line">Already up-to-date.</div><div class="line">Warning: /usr/<span class="built_in">local</span>/bin is not <span class="keyword">in</span> your PATH.</div><div class="line">==&gt; Installation successful!</div><div class="line"></div><div class="line">==&gt; Homebrew has enabled anonymous aggregate user behaviour analytics.</div><div class="line">Read the analytics documentation (and how to opt-out) here:</div><div class="line">  http://docs.brew.sh/Analytics.html</div><div class="line"></div><div class="line">==&gt; Next steps:</div><div class="line">- Run `brew <span class="built_in">help</span>` to get started</div><div class="line">- Further documentation: </div><div class="line">    http://docs.brew.sh</div></pre></td></tr></table></figure>
+<p>接着我按照倒数第三行执行 <code>brew help</code> 命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">LBinindeMacBook-Pro:~ abc1$ brew help</div><div class="line">-bash: brew: command not found</div></pre></td></tr></table></figure>
+<p>提示我 <code>command not found</code> ，肯定是没有安装好。</p>
+<p>这时候注意到上面</p>
+<p><img src="http://img.blog.csdn.net/20170415225243403?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTEJpbmlu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>有一行Warning</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Warning: /usr/local/bin is not in your PATH.</div></pre></td></tr></table></figure>
+<p>提示我目录 <code>/usr/local/bin</code> 没有在PATH这个环境变量里。</p>
+<hr>
+<h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>我查了资料 <a href="http://jingyan.baidu.com/article/d2b1d1029c1ea65c7e37d4c9.html，按照上面的步骤做了之后，发现任何的命令都执行不了，`ls" target="_blank" rel="external">http://jingyan.baidu.com/article/d2b1d1029c1ea65c7e37d4c9.html，按照上面的步骤做了之后，发现任何的命令都执行不了，`ls</a> -l` 都无法执行！</p>
+<p>后来 <a href="http://blog.csdn.net/weichuang_1/article/details/47679465" target="_blank" rel="external">Mac的控制台命令无法使用command not found</a> 按照这篇博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin</div><div class="line"><span class="built_in">cd</span> ~/</div><div class="line">touch .bash_profile</div><div class="line">open .bash_profile</div></pre></td></tr></table></figure>
+<p>这样就打开了一个记事本，会显示你之前配置过的path，修改记事本或者不修改(建议可以把配置环境变量的语句写在里面)</p>
+<p>此时输入更新命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> .bash_profile</div></pre></td></tr></table></figure>
+<p>发现命令行又好啦~</p>
+<hr>
+<h2 id="正确添加环境变量的方法："><a href="#正确添加环境变量的方法：" class="headerlink" title="正确添加环境变量的方法："></a>正确添加环境变量的方法：</h2><p>借鉴 <a href="http://elf8848.iteye.com/blog/1582137" target="_blank" rel="external">Mac 可设置环境变量的位置、查看和添加PATH环境变量</a></p>
+<p>用下面方法添加路径到PATH变量中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LBinindeMacBook-Pro:~ abc1$ export PATH=/usr/local/bin:$PATH</div></pre></td></tr></table></figure>
+<p>然后用echo查看</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LBinindeMacBook-Pro:~ abc1$ echo $PATH</div></pre></td></tr></table></figure>
+<p>就添加成功了~</p>
+<p>再执行Homebrew安装命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LBinindeMacBook-Pro:~ abc1$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
+<p>此时已经没有Warning~</p>
+<p>并且 <code>brew help</code> 也出现了帮助手册</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">LBinindeMacBook-Pro:~ abc1$ brew help</div><div class="line">Example usage:</div><div class="line">  brew search [TEXT|/REGEX/]</div><div class="line">  brew (info|home|options) [FORMULA...]</div><div class="line">  brew install FORMULA...</div><div class="line">  brew update</div><div class="line">  brew upgrade [FORMULA...]</div><div class="line">  brew uninstall FORMULA...</div><div class="line">  brew list [FORMULA...]</div><div class="line"></div><div class="line">Troubleshooting:</div><div class="line">  brew config</div><div class="line">  brew doctor</div><div class="line">  brew install -vd FORMULA</div><div class="line"></div><div class="line">Developers:</div><div class="line">  brew create [URL [--no-fetch]]</div><div class="line">  brew edit [FORMULA...]</div><div class="line">  http://docs.brew.sh/Formula-Cookbook.html</div><div class="line"></div><div class="line">Further help:</div><div class="line">  man brew</div><div class="line">  brew help [COMMAND]</div><div class="line">  brew home</div></pre></td></tr></table></figure>
+<hr>
+<p>至此，PATH环境变量配置以及Homebrew安装都已成功。</p>
+<p>虽然有些低级错误，不过写下来牢记于心。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天在安装 &lt;strong&gt;&lt;code&gt;Homebrew&lt;/code&gt;&lt;/strong&gt; 的时候遇到一些小插曲特此记录一下~&lt;/p&gt;
+&lt;p&gt;执行 &lt;a href=&quot;http://docs.brew.sh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Homebrew&lt;/a&gt; 官网提供的安装语句的时候&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;LBinindeMacBook-Pro:~ abc1$ ruby &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&lt;/span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;出现以下提示信息&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.lbinin.com/categories/Mac/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>配置服务器 —— 安装PhpMyAdmin</title>
+    <link href="http://www.lbinin.com/2017/04/16/server-phpmyadmin/"/>
+    <id>http://www.lbinin.com/2017/04/16/server-phpmyadmin/</id>
+    <published>2017-04-16T09:26:00.000Z</published>
+    <updated>2017-05-02T07:15:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先访问phpmyadmin官网首页 <a href="http://www.phpmyadmin.net/" target="_blank" rel="external">http://www.phpmyadmin.net/</a></p>
+<p>进入之后点击 <strong><code>导航栏</code></strong> 的 <code>Download</code> 链接，进入下载界面，右键复制 <code>phpMyAdmin-*-all-languages.tar.gz</code> 的链接，用wget下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget https://files.phpmyadmin.net/phpMyAdmin/4.7.0/phpMyAdmin-4.7.0-all-languages.tar.gz</span></div></pre></td></tr></table></figure>
+<p>下载完成后解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zvxf phpMyAdmin-4.7.0-all-languages.tar.gz</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>解压完得到文件夹 <code>phpMyAdmin-4.7.0-all-languages</code>，将其移动到网站根目录并更名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># mv phpMyAdmin-4.7.0-all-languages /usr/local/nginx/html/</span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd /usr/local/nginx/html/</span></div><div class="line">[root@iZ2844brz0xZ html]<span class="comment"># mv phpMyAdmin-4.7.0-all-languages phpmyAdmin</span></div></pre></td></tr></table></figure>
+<p>然后执行 <code>cd phpmyAdmin</code> 进入安装目录，这时候可以看到目录下有一个配置文件：<code>config.sample.inc.php</code>，拷贝这个文件并编辑：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ phpmyAdmin]<span class="comment"># cp config.sample.inc.php config.inc.php</span></div><div class="line">[root@iZ2844brz0xZ phpmyAdmin]<span class="comment"># vim config.inc.php</span></div></pre></td></tr></table></figure>
+<p><code>$cfg[&#39;blowfish_secret&#39;]</code> 配置项，后面默认为空，这里我们可以随便设置一个复杂的字符串，用来加密使用</p>
+<p><code>$cfg[&#39;Servers&#39;][$i][&#39;host&#39;]</code> 设置为 <code>127.0.0.1</code>。建议设置成IP地址，则无论是本地还是远程只要mysql授权都没有问题，默认localhost可能会出现<code>#2002 - Permission denied — The server is not responding</code> 错误</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先访问phpmyadmin官网首页 &lt;a href=&quot;http://www.phpmyadmin.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.phpmyadmin.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入之后点击 &lt;strong&gt;&lt;code&gt;导航栏&lt;/code&gt;&lt;/strong&gt; 的 &lt;code&gt;Download&lt;/code&gt; 链接，进入下载界面，右键复制 &lt;code&gt;phpMyAdmin-*-all-languages.tar.gz&lt;/code&gt; 的链接，用wget下载&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# wget https://files.phpmyadmin.net/phpMyAdmin/4.7.0/phpMyAdmin-4.7.0-all-languages.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;下载完成后解压&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# tar -zvxf phpMyAdmin-4.7.0-all-languages.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>配置服务器 —— Nginx添加多个二级子域名</title>
+    <link href="http://www.lbinin.com/2017/04/15/server-Nginx-domain/"/>
+    <id>http://www.lbinin.com/2017/04/15/server-Nginx-domain/</id>
+    <published>2017-04-15T15:52:00.000Z</published>
+    <updated>2017-05-02T07:16:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Nginx多文件配置二级子域名（推荐）"><a href="#Nginx多文件配置二级子域名（推荐）" class="headerlink" title="Nginx多文件配置二级子域名（推荐）"></a>Nginx多文件配置二级子域名（推荐）</h2><hr>
+<p>首先，在自己的域名控制台中添加解析，这里以添加blog前缀为例</p>
+<p>我用的是万网，在 <code>解析设置</code> 中 <code>添加解析</code></p>
+<p><img src="http://img.blog.csdn.net/20170415235411153?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTEJpbmlu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="添加解析"></p>
+<blockquote>
+<p><strong>主机记录</strong>：你想要的二级域名<br><strong>记录值</strong>：你的IP地址</p>
+</blockquote>
+<p>保存后，我们就完成了第一步把子域名解析到我们的服务器上。</p>
+<a id="more"></a>
+<hr>
+<p>第二步：添加配置文件</p>
+<p>进入nginx的 <code>/conf</code> 配置文件夹中，编辑 <code>nginx.conf</code> 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd /usr/local/nginx/conf/</span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># vim nginx.conf</span></div></pre></td></tr></table></figure>
+<p>在 <code>http</code> 模块中添加如下语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">include /usr/local/nginx/conf/sites-enabled/*.conf;</div></pre></td></tr></table></figure>
+<p>告诉这个配置文件要去包含 <code>/sites-enabled</code> 目录下的所有以 <code>.conf</code> 结尾的配置文件。<code>:wq</code> 保存。</p>
+<p>此时，我们新建一个 <code>/sites-enabled</code> 文件夹，并在其中添加 <code>blog.***.com.conf</code> 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ conf]<span class="comment"># mkdir sites-enabled</span></div><div class="line">[root@iZ2844brz0xZ sites-enabled]<span class="comment"># vim blog.***.com.conf</span></div></pre></td></tr></table></figure>
+<p>在文件中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen 80;                              #监听端口</div><div class="line">    server_name blog.***.com;               #绑定域名</div><div class="line">    root /usr/local/nginx/html/blog/;       #网站根目录，建议使用绝对路径</div><div class="line">    index index.php index.html index.htm;   #默认文件</div><div class="line">	</div><div class="line">	#添加对php的解析</div><div class="line">	location ~ \.php$ &#123;</div><div class="line">        fastcgi_pass   127.0.0.1:9000;</div><div class="line">        fastcgi_index  index.php;</div><div class="line">        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</div><div class="line">	    include        /usr/local/nginx/conf/fastcgi_params;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    #添加错误页面，利于搜索引擎收录以及良好的用户体验</div><div class="line">	error_page 404 /404.html;</div><div class="line">    location /404.html &#123;</div><div class="line">        root /usr/local/nginx/html/;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    error_page 500 502 503 504 /50x.html;</div><div class="line">    location =/50x.html &#123;</div><div class="line">        root /usr/local/nginx/html/;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>内容可自行添加</p>
+<hr>
+<h2 id="Nginx单文件配置二级子域名"><a href="#Nginx单文件配置二级子域名" class="headerlink" title="Nginx单文件配置二级子域名"></a>Nginx单文件配置二级子域名</h2><p>在 <code>nginx.conf</code> 文件的 <code>server</code> 模块中添加以下语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if ( $host ~* (\b(?!www\b)\w+)\.\w+\.\w+ ) &#123;</div><div class="line"> set $subdomain /$1;</div><div class="line">&#125;</div><div class="line">location / &#123;</div><div class="line"> root html$subdomain;</div><div class="line"> index index.html index.php index.htm index;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>即可解析到对应文件夹</p>
+<hr>
+<p>最后，重启nginx即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sites-enabled]# /usr/local/nginx/sbin/nginx -s reload</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Nginx多文件配置二级子域名（推荐）&quot;&gt;&lt;a href=&quot;#Nginx多文件配置二级子域名（推荐）&quot; class=&quot;headerlink&quot; title=&quot;Nginx多文件配置二级子域名（推荐）&quot;&gt;&lt;/a&gt;Nginx多文件配置二级子域名（推荐）&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;首先，在自己的域名控制台中添加解析，这里以添加blog前缀为例&lt;/p&gt;
+&lt;p&gt;我用的是万网，在 &lt;code&gt;解析设置&lt;/code&gt; 中 &lt;code&gt;添加解析&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20170415235411153?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTEJpbmlu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast&quot; alt=&quot;添加解析&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;主机记录&lt;/strong&gt;：你想要的二级域名&lt;br&gt;&lt;strong&gt;记录值&lt;/strong&gt;：你的IP地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;保存后，我们就完成了第一步把子域名解析到我们的服务器上。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>配置服务器 —— 安装vsftpd及配置</title>
+    <link href="http://www.lbinin.com/2017/04/15/server-vsftpd/"/>
+    <id>http://www.lbinin.com/2017/04/15/server-vsftpd/</id>
+    <published>2017-04-15T10:47:00.000Z</published>
+    <updated>2017-05-02T07:15:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装vsftpd"><a href="#安装vsftpd" class="headerlink" title="安装vsftpd"></a>安装vsftpd</h2><hr>
+<p>用 <code>yum</code> 安装我们需要的 <code>vsftpd</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# sudo yum install vsftpd</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="配置vsftpd"><a href="#配置vsftpd" class="headerlink" title="配置vsftpd"></a>配置vsftpd</h2><p>安装完成后可以找到 <code>/etc/vsftpd/vsftpd.conf</code> ，这就是vsftp的配置文件。</p>
+<p>接下来我们需要添加一个ftp用户，这个用户就是用来登录ftp服务器用的。<code>useradd</code> 后的用户名可以自定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]# useradd linbin</div></pre></td></tr></table></figure>
+<p>添加完用户后，给该用户添加密码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]# passwd linbin</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>接下来输入两次密码以确认。提示 <code>passwd: all authentication tokens updated successfully.</code> 设置密码成功。</p>
+<p>接下启动 <code>vsftpd</code>服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd start</div></pre></td></tr></table></figure>
+<p>接下来就可以在FileZilla中用ftp用户登录我们的服务器啦~</p>
+<p>修改用户默认目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]# vim /etc/passwd</div></pre></td></tr></table></figure>
+<p>找到你的用户名你一行，修改路径，然后保存即可（这里passwd文件也可以更改用户权限）</p>
+<hr>
+<p>附<br>-<br>vsftpd操作命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd start    --启动ftp命令</div><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd stop     --停止ftp命令</div><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd restart  --重启ftp命令</div></pre></td></tr></table></figure>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">路径</th>
+<th style="text-align:left">文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/etc/vsftpd/vsftpd.conf</td>
+<td style="text-align:left">主配置文件</td>
+</tr>
+<tr>
+<td style="text-align:left">/usr/sbin/vsftpd</td>
+<td style="text-align:left">Vsftpd的主程序</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/rc.d/init.d/vsftpd</td>
+<td style="text-align:left">启动脚本</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/pam.d/vsftpd</td>
+<td style="text-align:left">PAM认证文件（此文件中file=/etc/vsftpd/ftpusers字段，指明阻止访问的用户来自/etc/vsftpd/ftpusers文件中的用户）</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/vsftpd/ftpusers</td>
+<td style="text-align:left">禁止使用vsftpd的用户列表文件。记录不允许访问FTP服务器的用户名单，管理员可以把一些对系统安全有威胁的用户账号记录在此文件中，以免用户从FTP登录后获得大于上传下载操作的权利，而对系统造成损坏。（注意：linux-4中此文件在/etc/目录下）</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/vsftpd/user_list</td>
+<td style="text-align:left">禁止或允许使用vsftpd的用户列表文件。这个文件中指定的用户缺省情况（即在/etc/vsftpd/vsftpd.conf中设置userlist_deny=YES）下也不能访问FTP服务器，在设置了userlist_deny=NO时,仅允许user_list中指定的用户访问FTP服务器。（注意：linux-4中此文件在/etc/目录下）</td>
+</tr>
+<tr>
+<td style="text-align:left">/var/ftp</td>
+<td style="text-align:left">匿名用户主目录；本地用户主目录为：/home/用户主目录，即登录后进入自己家目录</td>
+</tr>
+<tr>
+<td style="text-align:left">/var/ftp/pub</td>
+<td style="text-align:left">匿名用户的下载目录，此目录需赋权根chmod 1777 pub（1为特殊权限，使上载后无法删除）</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/logrotate.d/vsftpd.log</td>
+<td style="text-align:left">Vsftpd的日志文件</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p><a href="http://os.51cto.com/art/201008/222036.htm" target="_blank" rel="external">vsftpd入门——安装、配置、案例与常见问题</a> </p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装vsftpd&quot;&gt;&lt;a href=&quot;#安装vsftpd&quot; class=&quot;headerlink&quot; title=&quot;安装vsftpd&quot;&gt;&lt;/a&gt;安装vsftpd&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;用 &lt;code&gt;yum&lt;/code&gt; 安装我们需要的 &lt;code&gt;vsftpd&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]# sudo yum install vsftpd&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;配置vsftpd&quot;&gt;&lt;a href=&quot;#配置vsftpd&quot; class=&quot;headerlink&quot; title=&quot;配置vsftpd&quot;&gt;&lt;/a&gt;配置vsftpd&lt;/h2&gt;&lt;p&gt;安装完成后可以找到 &lt;code&gt;/etc/vsftpd/vsftpd.conf&lt;/code&gt; ，这就是vsftp的配置文件。&lt;/p&gt;
+&lt;p&gt;接下来我们需要添加一个ftp用户，这个用户就是用来登录ftp服务器用的。&lt;code&gt;useradd&lt;/code&gt; 后的用户名可以自定义&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ vsftpd]# useradd linbin&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;添加完用户后，给该用户添加密码。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ vsftpd]# passwd linbin&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>配置服务器 —— Nginx的安装和配置</title>
+    <link href="http://www.lbinin.com/2017/04/15/server-nginx/"/>
+    <id>http://www.lbinin.com/2017/04/15/server-nginx/</id>
+    <published>2017-04-15T08:18:00.000Z</published>
+    <updated>2017-05-02T07:17:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Nginx安装："><a href="#Nginx安装：" class="headerlink" title="Nginx安装："></a>Nginx安装：</h2><p><strong><em>下载解压安装</em></strong></p>
+<hr>
+<p>进入Nginx官网站 <a href="http://nginx.org/" target="_blank" rel="external">http://nginx.org/</a>，进入后选择最新的版本，进入页面后在 <code>Stable version</code> 中选择 <code>nginx-*</code> 右键复制链接，然后用 <code>wget</code> 下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget http://nginx.org/download/nginx-1.12.0.tar.gz</span></div></pre></td></tr></table></figure>
+<p>如果提示wget命令未找到，则执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># sudo yum install wget</span></div></pre></td></tr></table></figure>
+<p>下载完用 <code>ll</code> 命令查看刚刚下载获得的 <code>nginx-*.tar.gz</code> 文件，用下面命令解压它</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf nginx-1.12.0.tar.gz</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p><strong>-z</strong>: 表示使用gzip的属性。<br><strong>-x</strong>: 解开一个压缩文件的参数指令。<br><strong>-v</strong>: 表示压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！<br><strong>-f</strong>: 使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！</p>
+<p><a href="http://jingyan.baidu.com/article/86112f13605d30273697876e.html?st=2&amp;os=0&amp;bd_page_type=1&amp;net_type=1" target="_blank" rel="external">参考资料</a></p>
+</blockquote>
+<hr>
+<p>安装Nginx前，需要安装以下三个依赖包：</p>
+<ol>
+<li><p>gzip 模块需要 <code>zlib</code> 库</p>
+</li>
+<li><p>rewrite 模块需要 <code>pcre</code> 库</p>
+</li>
+<li><p>ssl 功能需要 <code>openssl</code> 库</p>
+</li>
+</ol>
+<p><a href="https://www.openssl.org/source/" target="_blank" rel="external">https://www.openssl.org/source/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget https://www.openssl.org/source/openssl-fips-2.0.14.tar.gz</span></div></pre></td></tr></table></figure>
+<p><a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget http://www.zlib.net/zlib-1.2.11.tar.gz</span></div></pre></td></tr></table></figure>
+<p>(<a href="http://www.pcre.org/)[http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/)[http://www.pcre.org/</a>]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz</span></div></pre></td></tr></table></figure>
+<p>下载完成后安装，依赖包安装顺序依次为: <code>openssl</code>、<code>zlib</code>、<code>pcre</code>, 然后安装 <code>Nginx</code> 包</p>
+<hr>
+<p>1.安装openssl</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf openssl-fips-2.0.14.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd openssl-fips-2.0.14/</span></div><div class="line">[root@iZ2844brz0xZ openssl-fips-2.0.14]<span class="comment"># ./config </span></div><div class="line">[root@iZ2844brz0xZ openssl-fips-2.0.14]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ openssl-fips-2.0.14]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
+<p>2.安装zlib</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf zlib-1.2.11.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd zlib-1.2.11/</span></div><div class="line">[root@iZ2844brz0xZ zlib-1.2.11]<span class="comment"># ./configure </span></div><div class="line">[root@iZ2844brz0xZ zlib-1.2.11]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ zlib-1.2.11]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
+<p>3.安装pcre</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf pcre-8.39.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd pcre-8.39/</span></div><div class="line">[root@iZ2844brz0xZ pcre-8.39]<span class="comment"># ./configure </span></div><div class="line">[root@iZ2844brz0xZ pcre-8.39]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ pcre-8.39]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
+<p>4.安装nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf nginx-1.12.0.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd nginx-1.12.0/</span></div><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># ./configure --with-pcre=../pcre-8.39 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-fips-2.0.14</span></div><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
+<hr>
+<p>检测是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># cd /usr/local/nginx/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./nginx -t</span></div></pre></td></tr></table></figure>
+<p>若出现下方信息表示安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">nginx: the configuration file /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf syntax is ok</div><div class="line">nginx: configuration file /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf <span class="built_in">test</span> is successful</div></pre></td></tr></table></figure>
+<p>最后一步：启动Nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./nginx</span></div></pre></td></tr></table></figure>
+<p>查看端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># netstat -ntlp</span></div></pre></td></tr></table></figure>
+<p>出现以下结果</p>
+<p><img src="http://img.blog.csdn.net/20170415170211580?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTEJpbmlu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<hr>
+<p>至此，Nginx安装结束</p>
+<p>参考资料：</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/hzh19870110/p/6100661.html" target="_blank" rel="external">http://www.cnblogs.com/hzh19870110/p/6100661.html</a> <em>作者：grhlove123</em></p>
+</blockquote>
+<h2 id="配置php-fpm"><a href="#配置php-fpm" class="headerlink" title="配置php-fpm"></a>配置php-fpm</h2><p>进入php的 <code>sbin</code> 目录下启动 <code>php-fpm</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd /usr/local/php7/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./php-fpm</span></div></pre></td></tr></table></figure>
+<p>（若提示没有权限，在命令前加上 <code>sudo</code> 即可。）</p>
+<p>发现提示下方信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[15-Apr-2017 17:06:21] ERROR: failed to open configuration file <span class="string">'/usr/local/php7/etc/php-fpm.conf'</span>: No such file or directory (2)</div><div class="line">[15-Apr-2017 17:06:21] ERROR: failed to load configuration file <span class="string">'/usr/local/php7/etc/php-fpm.conf'</span></div><div class="line">[15-Apr-2017 17:06:21] ERROR: FPM initialization failed</div></pre></td></tr></table></figure>
+<p>告诉我们在 <code>/usr/local/php7/etc/</code> 目录下没有找到 <code>php-fpm.conf</code> 配置文件。</p>
+<p>那我们进入对应文件夹查看文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># cd /usr/local/php7/etc/</span></div><div class="line">[root@iZ2844brz0xZ etc]<span class="comment"># ll</span></div></pre></td></tr></table></figure>
+<p>显示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">total 16</div><div class="line">-rw-r--r-- 1 root root 1239 Apr 15 07:33 pear.conf</div><div class="line">-rw-r--r-- 1 root root 4468 Apr 15 07:33 php-fpm.conf.default</div><div class="line">drwxr-xr-x 2 root root 4096 Apr 15 07:33 php-fpm.d</div></pre></td></tr></table></figure>
+<p>发现 <code>php-fpm.conf</code> 多了一个 <code>default</code> 结尾，我们只需要把文件重新命名就好了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ etc]<span class="comment"># mv php-fpm.conf.default php-fpm.conf --利用mv移动命令更改名字</span></div></pre></td></tr></table></figure>
+<p>重新进入php的 <code>sbin</code> 目录下启动 <code>php-fpm</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ etc]<span class="comment"># cd /usr/local/php7/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./php-fpm</span></div></pre></td></tr></table></figure>
+<p>这时候提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[15-Apr-2017 17:08:23] WARNING: Nothing matches the include pattern <span class="string">'/usr/local/php7/etc/php-fpm.d/*.conf'</span> from /usr/<span class="built_in">local</span>/php7/etc/php-fpm.conf at line 125.</div><div class="line">[15-Apr-2017 17:08:23] ERROR: No pool defined. at least one pool section must be specified <span class="keyword">in</span> config file</div><div class="line">[15-Apr-2017 17:08:23] ERROR: failed to post process the configuration</div><div class="line">[15-Apr-2017 17:08:23] ERROR: FPM initialization failed</div></pre></td></tr></table></figure>
+<p>告诉我们在 <code>/usr/local/php7/etc/php-fpm.d/</code> 目录下没有找到 <code>.conf</code> 文件，问题出在125行，我们用vim编辑文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># vim /usr/local/php7/etc/php-fpm.conf</span></div></pre></td></tr></table></figure>
+<p>进入后输入命令 <code>:125</code> 跳转到125行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">include=/usr/local/php7/etc/php-fpm.d/*.conf</div></pre></td></tr></table></figure>
+<p>给我们的信息是要找 <code>php-fpm.d</code> 目录下的以 <code>.conf</code> 结尾的文件，输入<code>:q!</code> 退出，进入对应文件夹，查看文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># cd /usr/local/php7/etc/php-fpm.d/</span></div><div class="line">[root@iZ2844brz0xZ php-fpm.d]<span class="comment"># ll</span></div></pre></td></tr></table></figure>
+<p>发现以下文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">total 20</div><div class="line">-rw-r--r-- 1 root root 18521 Apr 15 07:33 www.conf.default</div></pre></td></tr></table></figure>
+<p>重命名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ php-fpm.d]<span class="comment"># mv www.conf.default www.conf</span></div></pre></td></tr></table></figure>
+<p>回到 <code>sbin</code> 目录下重新启动 <code>php-fpm</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ php-fpm.d]<span class="comment"># cd /usr/local/php7/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./php-fpm</span></div></pre></td></tr></table></figure>
+<p>若没有提示信息表明php-fpm启动成功啦~</p>
+<p>用以下命令查看fpm进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># ps aux | grep php-fpm</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h2><p>进入Nginx目录，编辑 <code>nginx.conf</code> 配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ nginx]<span class="comment"># cd /usr/local/nginx/</span></div><div class="line">[root@iZ2844brz0xZ nginx]<span class="comment"># cd conf/</span></div><div class="line">[root@iZ2844brz0xZ conf]<span class="comment"># vim nginx.conf</span></div></pre></td></tr></table></figure>
+<p>看到 <code>server</code> 模块下有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">            root   html;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>这段表示所有的文件都会进入html这个目录下，我们现在编写与php相关的语句</p>
+<p>在下面我们可以找到配置文件已经帮我们写好了我们只需要把前面的注释符号 <code>#</code> 去掉就好了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">location ~ \.php$ &#123;</div><div class="line">            root           html;</div><div class="line">            fastcgi_pass   127.0.0.1:9000;</div><div class="line">            fastcgi_index  index.php;</div><div class="line">            fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</div><div class="line">            include        fastcgi_params;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>输入<code>:wq</code> 保存退出</p>
+<p>进入nginx的<code>html</code> 目录，新建一个文件测试一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ conf]<span class="comment"># cd ..</span></div><div class="line">[root@iZ2844brz0xZ nginx]<span class="comment"># cd html/</span></div><div class="line">[root@iZ2844brz0xZ html]<span class="comment"># vim test.php</span></div></pre></td></tr></table></figure>
+<p>输入</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">	phpinfo();</div></pre></td></tr></table></figure>
+<p>忘了说，修改完配置文件记得要重新启动nginx哦</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd /usr/local/nginx/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./nginx -s reload</span></div></pre></td></tr></table></figure>
+<p>打开网址，运行成功~</p>
+<hr>
+<h2 id="附："><a href="#附：" class="headerlink" title="附："></a>附：</h2><blockquote>
+<p><a href="https://segmentfault.com/a/1190000007322358" target="_blank" rel="external">Nginx和php-fpm的运行原理</a> <em>作者：zilu</em> （写的很棒~）</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Nginx安装：&quot;&gt;&lt;a href=&quot;#Nginx安装：&quot; class=&quot;headerlink&quot; title=&quot;Nginx安装：&quot;&gt;&lt;/a&gt;Nginx安装：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;下载解压安装&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;进入Nginx官网站 &lt;a href=&quot;http://nginx.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://nginx.org/&lt;/a&gt;，进入后选择最新的版本，进入页面后在 &lt;code&gt;Stable version&lt;/code&gt; 中选择 &lt;code&gt;nginx-*&lt;/code&gt; 右键复制链接，然后用 &lt;code&gt;wget&lt;/code&gt; 下载&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# wget http://nginx.org/download/nginx-1.12.0.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果提示wget命令未找到，则执行&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# sudo yum install wget&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;下载完用 &lt;code&gt;ll&lt;/code&gt; 命令查看刚刚下载获得的 &lt;code&gt;nginx-*.tar.gz&lt;/code&gt; 文件，用下面命令解压它&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# tar -zxvf nginx-1.12.0.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>配置服务器 —— 安装Mysql</title>
+    <link href="http://www.lbinin.com/2017/04/15/server-mysql/"/>
+    <id>http://www.lbinin.com/2017/04/15/server-mysql/</id>
+    <published>2017-04-15T02:20:00.000Z</published>
+    <updated>2017-05-02T07:16:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Mysql安装："><a href="#Mysql安装：" class="headerlink" title="Mysql安装："></a>Mysql安装：</h2><p><strong><em>下载解压安装</em></strong></p>
+<hr>
+<h2 id="2017-4-16更新"><a href="#2017-4-16更新" class="headerlink" title="2017.4.16更新"></a><em>2017.4.16更新</em></h2><p>说说遇到的坑吧，首先对mysql的make命令，真的是编译一天！编译了一天就不说了，最后还有奇奇怪怪的问题！结果还没有安装成功！</p>
+<p>现在我决定换一个安装方式！</p>
+<p>说一下我的操作系统是 <code>CentOS7</code>，查资料发现是CentOS7版本将MySQL数据库软件从默认的程序列表中移除，用mariadb代替了，这样，我们回归寻常路</p>
+<p>CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载</p>
+<a id="more"></a>
+<p>安装 <code>mysql-community-server</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</div><div class="line">[root@iZ2844brz0xZ ~]# rpm -ivh mysql-community-release-el7-5.noarch.rpm</div><div class="line">[root@iZ2844brz0xZ ~]# yum install mysql-community-server</div></pre></td></tr></table></figure>
+<p>成功安装之后启动<code>mysql</code> 服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# service mysqld start</div></pre></td></tr></table></figure>
+<p>初次安装mysql的时候，root账户是没有密码的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# mysql -u root -p</div><div class="line">Enter password:</div></pre></td></tr></table></figure>
+<p>要求输入密码的时候直接回车，因为没有密码，进入到mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newPassword&apos;);</div></pre></td></tr></table></figure>
+<p>其中 <code>newPassword</code> 为你为 <code>root</code> 账户设置的密码。</p>
+<p>若提示下面信息则表示设置成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Query OK, 0 rows affected (0.02 sec)</div></pre></td></tr></table></figure>
+<p>退出，搞定~</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; exit</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="手动编译版本："><a href="#手动编译版本：" class="headerlink" title="手动编译版本："></a>手动编译版本：</h2><p><a href="https://dev.mysql.com/downloads/mysql/，进入后在下方选择" target="_blank" rel="external">https://dev.mysql.com/downloads/mysql/，进入后在下方选择</a> <strong><code>source code</code></strong> 版本，选择 <code>Generic Linux (Architecture Independent), Compressed TAR Archive</code>，右键复制链接，用下面命令下载后得到 <code>.tar.gz</code> 的包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.18.tar.gz</div></pre></td></tr></table></figure>
+<p>如果提示wget命令为找到，则执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# sudo yum install wget</div></pre></td></tr></table></figure>
+<p>下载完用 <code>ll</code> 命令查看刚刚下载获得的 <code>mysql-**.**.**.tar.gz</code> 文件，用下面命令解压并解包它</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# tar -zxvf mysql-5.7.18.tar.gz</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>-z</strong>: 表示使用gzip的属性。<br><strong>-x</strong>: 解开一个压缩文件的参数指令。<br><strong>-v</strong>: 表示压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！<br><strong>-f</strong>: 使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！</p>
+<p><a href="http://jingyan.baidu.com/article/86112f13605d30273697876e.html?st=2&amp;os=0&amp;bd_page_type=1&amp;net_type=1" target="_blank" rel="external">参考资料</a></p>
+</blockquote>
+<p>接下来我们用yum来安装我们需要的依赖和工具。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# sudo yum install cmake gcc-c++ ncurses-devel perl-Data-Dumper boost boost-doc boost-devel</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="Mysql安装：-1"><a href="#Mysql安装：-1" class="headerlink" title="Mysql安装："></a>Mysql安装：</h2><p><strong><em>编译安装</em></strong></p>
+<p>进入mysql目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# cd mysql-5.7.18/</div></pre></td></tr></table></figure>
+<p>用cmake命令编译，代码如下，后面的均为配置数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# cmake -DCMAKE_INSTALL_PREFIX=/home/mysql -DMYSQL_DATADIR=/home/mysql/data -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DMYSQL_TCP_PORT=3306 -DMYSQL_USER=mysql -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_BLACKHOLE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/usr/local/boost</div></pre></td></tr></table></figure>
+<p>cmake命令结束后，使用make命令进行编译（过程有点慢）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# make</div></pre></td></tr></table></figure>
+<p>make编译完成后，用下面命令安装Mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# sudo make install</div></pre></td></tr></table></figure>
+<p>安装结束后，使用 <code>mysqld</code> 命令启动Mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# mysqld</div></pre></td></tr></table></figure>
+<p>启动后，使用mysql命令进入Mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# mysql</div></pre></td></tr></table></figure>
+<p>若显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt;</div></pre></td></tr></table></figure></p>
+<p>表明进入mysql，安装成功。</p>
+<hr>
+<h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>在这里特别提醒， 对于mysql5.7.8的make编译， 如果是阿里云centos主机512M内存的， 会在make编译到45%左右的时候会报错， 这是内存不足所致。</p>
+<p>那么设置2G交换分区来用下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ /]# dd if=/dev/zero of=/swapfile bs=1k count=2048000 --获取要增加的2G的SWAP文件块（执行命令后需要等待一段时间）</div><div class="line">[root@iZ2844brz0xZ /]# mkswap /swapfile     -- 创建SWAP文件</div><div class="line">[root@iZ2844brz0xZ /]# swapon /swapfile     -- 激活SWAP文件</div><div class="line">[root@iZ2844brz0xZ /]# swapon -s            -- 查看SWAP信息是否正确</div><div class="line">[root@iZ2844brz0xZ /]# echo &quot;/var/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab     -- 添加到fstab文件中让系统引导时自动启动</div></pre></td></tr></table></figure></p>
+<p>注意, swapfile文件的路径在 <code>/var/</code> 下 </p>
+<p>编译完后, 如果不想要交换分区了, 可以删除:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ /]# swapoff /swapfile</div><div class="line">[root@iZ2844brz0xZ /]# rm -fr /swapfile</div></pre></td></tr></table></figure>
+<p>实际操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ /]# dd if=/dev/zero of=/swapfile bs=1k count=2048000</div><div class="line">2048000+0 records in</div><div class="line">2048000+0 records out</div><div class="line">2097152000 bytes (2.1 GB) copied, 42.2248 s, 49.7 MB/s</div><div class="line">[root@iZ2844brz0xZ /]# mkswap /swapfile</div><div class="line">Setting up swapspace version 1, size = 2047996 KiB</div><div class="line">no label, UUID=5f8de87f-9057-4bf7-af9d-a09e1be7de56</div><div class="line">[root@iZ2844brz0xZ /]# swapon /swapfile</div><div class="line">swapon: /swapfile: insecure permissions 0644, 0600 suggested.</div><div class="line">[root@iZ2844brz0xZ /]# swapon -s</div><div class="line">Filename				Type		Size	Used	Priority</div><div class="line">/swapfile                              	file	2047996	0	-1</div><div class="line">[root@iZ2844brz0xZ /]# echo &quot;/var/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab</div><div class="line">[root@iZ2844brz0xZ /]#</div></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="http://blog.csdn.net/cryhelyxx/article/details/47610247" target="_blank" rel="external">参考资料</a> <em>作者：zhuxiongxian</em></p>
+</blockquote>
+<hr>
+<p>至此，Mysql安装结束</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Mysql安装：&quot;&gt;&lt;a href=&quot;#Mysql安装：&quot; class=&quot;headerlink&quot; title=&quot;Mysql安装：&quot;&gt;&lt;/a&gt;Mysql安装：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;下载解压安装&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;2017-4-16更新&quot;&gt;&lt;a href=&quot;#2017-4-16更新&quot; class=&quot;headerlink&quot; title=&quot;2017.4.16更新&quot;&gt;&lt;/a&gt;&lt;em&gt;2017.4.16更新&lt;/em&gt;&lt;/h2&gt;&lt;p&gt;说说遇到的坑吧，首先对mysql的make命令，真的是编译一天！编译了一天就不说了，最后还有奇奇怪怪的问题！结果还没有安装成功！&lt;/p&gt;
+&lt;p&gt;现在我决定换一个安装方式！&lt;/p&gt;
+&lt;p&gt;说一下我的操作系统是 &lt;code&gt;CentOS7&lt;/code&gt;，查资料发现是CentOS7版本将MySQL数据库软件从默认的程序列表中移除，用mariadb代替了，这样，我们回归寻常路&lt;/p&gt;
+&lt;p&gt;CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>配置服务器 —— 安装PHP</title>
-    <link href="http://yoursite.com/2017/05/02/server-php/"/>
-    <id>http://yoursite.com/2017/05/02/server-php/</id>
-    <published>2017-05-02T05:54:13.000Z</published>
-    <updated>2017-05-02T06:09:10.000Z</updated>
+    <link href="http://www.lbinin.com/2017/04/14/server-php/"/>
+    <id>http://www.lbinin.com/2017/04/14/server-php/</id>
+    <published>2017-04-14T15:49:00.000Z</published>
+    <updated>2017-05-02T06:59:02.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="PHP安装："><a href="#PHP安装：" class="headerlink" title="PHP安装："></a>PHP安装：</h2><p><strong><em>下载解压安装</em></strong></p>
 <hr>
@@ -86,32 +581,7 @@
     
     </summary>
     
-      <category term="服务器" scheme="http://yoursite.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>哇我回来啦</title>
-    <link href="http://yoursite.com/2017/05/02/HelloBlog/"/>
-    <id>http://yoursite.com/2017/05/02/HelloBlog/</id>
-    <published>2017-05-02T05:47:08.000Z</published>
-    <updated>2017-05-02T05:51:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>大家好！我胡汉三又回来啦~</p>
-<p><img src="/2017/05/02/HelloBlog/back.jpg" alt="我回来了!"></p>
-<a id="more"></a>
-<p>经过一段时间的折腾终于稳定好了自己的服务器，也搭建好了Hexo接下来就是把之前的文章迁移过来然后就安心的写自己的博客啦~</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;大家好！我胡汉三又回来啦~&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2017/05/02/HelloBlog/back.jpg&quot; alt=&quot;我回来了!&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂记" scheme="http://yoursite.com/categories/%E6%9D%82%E8%AE%B0/"/>
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
   </entry>

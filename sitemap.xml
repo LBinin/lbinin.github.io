@@ -2,14 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/05/02/server-php/</loc>
+    <loc>http://www.lbinin.com/2017/04/15/server-nginx/</loc>
     
-    <lastmod>2017-05-02T06:09:10.000Z</lastmod>
+    <lastmod>2017-05-02T07:17:49.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/05/02/HelloBlog/</loc>
+    <loc>http://www.lbinin.com/2017/04/15/server-mysql/</loc>
+    
+    <lastmod>2017-05-02T07:16:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.lbinin.com/2017/04/15/server-Nginx-domain/</loc>
+    
+    <lastmod>2017-05-02T07:16:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.lbinin.com/2017/04/16/server-phpmyadmin/</loc>
+    
+    <lastmod>2017-05-02T07:15:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.lbinin.com/2017/04/15/server-vsftpd/</loc>
+    
+    <lastmod>2017-05-02T07:15:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.lbinin.com/2017/04/17/Mac-Homebrew/</loc>
+    
+    <lastmod>2017-05-02T07:15:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.lbinin.com/2017/04/14/server-php/</loc>
+    
+    <lastmod>2017-05-02T06:59:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.lbinin.com/2017/05/02/HelloBlog/</loc>
     
     <lastmod>2017-05-02T05:51:34.000Z</lastmod>
     

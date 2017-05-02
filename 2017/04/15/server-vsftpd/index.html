@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 配置服务器 —— 安装vsftpd及配置 · Lin's Blog</title><meta name="description" content="配置服务器 —— 安装vsftpd及配置 - Linbin"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://www.lbinin.com/atom.xml" title="Lin's Blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/lbinin" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">配置服务器 —— 安装vsftpd及配置</h1><div class="post-info">Apr 15, 2017</div><div class="post-content"><h2 id="安装vsftpd"><a href="#安装vsftpd" class="headerlink" title="安装vsftpd"></a>安装vsftpd</h2><hr>
+<p>用 <code>yum</code> 安装我们需要的 <code>vsftpd</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# sudo yum install vsftpd</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="配置vsftpd"><a href="#配置vsftpd" class="headerlink" title="配置vsftpd"></a>配置vsftpd</h2><p>安装完成后可以找到 <code>/etc/vsftpd/vsftpd.conf</code> ，这就是vsftp的配置文件。</p>
+<p>接下来我们需要添加一个ftp用户，这个用户就是用来登录ftp服务器用的。<code>useradd</code> 后的用户名可以自定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]# useradd linbin</div></pre></td></tr></table></figure>
+<p>添加完用户后，给该用户添加密码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]# passwd linbin</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>接下来输入两次密码以确认。提示 <code>passwd: all authentication tokens updated successfully.</code> 设置密码成功。</p>
+<p>接下启动 <code>vsftpd</code>服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd start</div></pre></td></tr></table></figure>
+<p>接下来就可以在FileZilla中用ftp用户登录我们的服务器啦~</p>
+<p>修改用户默认目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]# vim /etc/passwd</div></pre></td></tr></table></figure>
+<p>找到你的用户名你一行，修改路径，然后保存即可（这里passwd文件也可以更改用户权限）</p>
+<hr>
+<p>附<br>-<br>vsftpd操作命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd start    --启动ftp命令</div><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd stop     --停止ftp命令</div><div class="line">[root@iZ2844brz0xZ vsftpd]#service vsftpd restart  --重启ftp命令</div></pre></td></tr></table></figure>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">路径</th>
+<th style="text-align:left">文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/etc/vsftpd/vsftpd.conf</td>
+<td style="text-align:left">主配置文件</td>
+</tr>
+<tr>
+<td style="text-align:left">/usr/sbin/vsftpd</td>
+<td style="text-align:left">Vsftpd的主程序</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/rc.d/init.d/vsftpd</td>
+<td style="text-align:left">启动脚本</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/pam.d/vsftpd</td>
+<td style="text-align:left">PAM认证文件（此文件中file=/etc/vsftpd/ftpusers字段，指明阻止访问的用户来自/etc/vsftpd/ftpusers文件中的用户）</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/vsftpd/ftpusers</td>
+<td style="text-align:left">禁止使用vsftpd的用户列表文件。记录不允许访问FTP服务器的用户名单，管理员可以把一些对系统安全有威胁的用户账号记录在此文件中，以免用户从FTP登录后获得大于上传下载操作的权利，而对系统造成损坏。（注意：linux-4中此文件在/etc/目录下）</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/vsftpd/user_list</td>
+<td style="text-align:left">禁止或允许使用vsftpd的用户列表文件。这个文件中指定的用户缺省情况（即在/etc/vsftpd/vsftpd.conf中设置userlist_deny=YES）下也不能访问FTP服务器，在设置了userlist_deny=NO时,仅允许user_list中指定的用户访问FTP服务器。（注意：linux-4中此文件在/etc/目录下）</td>
+</tr>
+<tr>
+<td style="text-align:left">/var/ftp</td>
+<td style="text-align:left">匿名用户主目录；本地用户主目录为：/home/用户主目录，即登录后进入自己家目录</td>
+</tr>
+<tr>
+<td style="text-align:left">/var/ftp/pub</td>
+<td style="text-align:left">匿名用户的下载目录，此目录需赋权根chmod 1777 pub（1为特殊权限，使上载后无法删除）</td>
+</tr>
+<tr>
+<td style="text-align:left">/etc/logrotate.d/vsftpd.log</td>
+<td style="text-align:left">Vsftpd的日志文件</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p><a href="http://os.51cto.com/art/201008/222036.htm" target="_blank" rel="external">vsftpd入门——安装、配置、案例与常见问题</a> </p>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/04/15/server-Nginx-domain/" class="prev">上一篇</a><a href="/2017/04/15/server-nginx/" class="next">下一篇</a><a href="javascript: history.go(-1);" class="next">返回</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://www.lbinin.com">Linbin</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>
