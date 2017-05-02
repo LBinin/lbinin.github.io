@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-02T06:00:08.000Z</updated>
+  <updated>2017-05-02T06:09:10.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/05/02/server-php/"/>
     <id>http://yoursite.com/2017/05/02/server-php/</id>
     <published>2017-05-02T05:54:13.000Z</published>
-    <updated>2017-05-02T06:00:08.000Z</updated>
+    <updated>2017-05-02T06:09:10.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="PHP安装："><a href="#PHP安装：" class="headerlink" title="PHP安装："></a>PHP安装：</h2><p><strong><em>下载解压安装</em></strong></p>
 <hr>
