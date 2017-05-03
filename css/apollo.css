@@ -438,7 +438,8 @@ code,pre {
 	border-radius:2px;
 	line-height:1.1em;
 	background-color:#f8f8f8;
-	overflow-x:auto
+	overflow-x:auto;
+    -webkit-overflow-scrolling: touch;
 }
 .highlight table,.highlight tr,.highlight td {
 	width:100%;
