@@ -24,7 +24,7 @@
 <p>在前一个元素的提示区域滑出，且当前元素被hover时去除其 <code>visibility</code> 的延时（既让它立即显示）。让用户看得到滑入动画效果。</p>
 </blockquote>
 <p>就是这个 <code>visibility</code> 的 <code>transition-delay</code> 让我们能够看到滑入和滑出的动效</p>
-<p>接下来的 <code>will-change</code> 的作用是提高页面动画渲染效率，详见 <a href="/">关于will-change的用法以及一些web动画渲染优化</a> 。</p>
+<p>接下来的 <code>will-change</code> 的作用是提高页面动画渲染效率，因为总是要改变所以把它放在了 <code>slide</code> 默认属性中，详见 <a href="/2017/05/03/关于will-change的用法以及一些web动画渲染优化/">关于will-change的用法以及一些web动画渲染优化</a> 。</p>
 <p>最后的 <code>transform: translateY(100%);</code> 是 <code>slide</code> 的默认位置，既 <code>col</code> 的下方。</p>
 <p>接下来的语句就是控制 <strong>提示区域位置</strong> 的规则啦</p>
 <hr>
