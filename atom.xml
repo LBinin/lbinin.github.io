@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-05-04T08:44:07.000Z</updated>
+  <updated>2017-05-04T08:47:35.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.lbinin.com/2017/05/03/%E5%85%B3%E4%BA%8Ewill-change%E7%9A%84%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9Bweb%E5%8A%A8%E7%94%BB%E6%B8%B2%E6%9F%93%E4%BC%98%E5%8C%96/"/>
     <id>http://www.lbinin.com/2017/05/03/关于will-change的用法以及一些web动画渲染优化/</id>
     <published>2017-05-03T08:31:19.000Z</published>
-    <updated>2017-05-04T08:44:07.000Z</updated>
+    <updated>2017-05-04T08:47:35.000Z</updated>
     
     <content type="html"><![CDATA[<p>之前在研究一个有关 <a href="/2017/05/03/利用纯css完成感知悬停/">利用纯css完成感知悬停</a> 的代码，在里面第一次见到了 <code>will-change</code> 属性（学识疏浅勿喷-=-），查资料看了一下张鑫旭大大的博客 <a href="http://www.zhangxinxu.com/wordpress/2015/11/css3-will-change-improve-paint/" target="_blank" rel="external">使用CSS3 will-change提高页面滚动、动画等渲染性能</a> 对这个属性肃然起敬（相遇恨晚，抱头痛哭.jpg）。</p>
 <a id="more"></a>
@@ -41,7 +41,8 @@
 
 <h4 id="正确示例"><a href="#正确示例" class="headerlink" title="正确示例"></a>正确示例</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.will-change</span> &#123;</div><div class="line">	<span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.will-change</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">	<span class="attribute">will-change</span>: transform;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.will-change</span><span class="selector-pseudo">:active</span> &#123;</div><div class="line">	<span class="attribute">transform</span>: <span class="built_in">scale</span>(1.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<p>不要直接写在默认状态中，因为will-change会一直挂着：</p>
+<div class="tip"><br>不要直接写在默认状态中，因为will-change会一直挂着，如：<br></div>
+
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.will-change</span> &#123;</div><div class="line">  <span class="attribute">will-change</span>: transform;</div><div class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.will-change</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(1.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>可以让父元素hover的时候，声明will-change，这样，移出的时候就会自动remove，触发的范围基本上是有效元素范围。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.will-change-parent</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.will-change</span> &#123;</div><div class="line">  <span class="attribute">will-change</span>: transform;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.will-change</span> &#123;</div><div class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.will-change</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(1.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
