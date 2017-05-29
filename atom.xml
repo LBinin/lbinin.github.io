@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-05-29T04:39:01.000Z</updated>
+  <updated>2017-05-29T04:52:16.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -16,29 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>需求工程复习-自我评估</title>
     <link href="http://www.lbinin.com/2017/05/29/%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%E5%A4%8D%E4%B9%A0-%E8%87%AA%E6%88%91%E8%AF%84%E4%BC%B0/"/>
     <id>http://www.lbinin.com/2017/05/29/需求工程复习-自我评估/</id>
-    <published>2017-05-29T04:38:59.000Z</published>
-    <updated>2017-05-29T04:39:01.000Z</updated>
+    <published>2017-05-29T04:42:58.000Z</published>
+    <updated>2017-05-29T04:52:16.000Z</updated>
     
-    <content type="html"><![CDATA[<p>###1.如何定义、交流和使用项目范围?</p>
+    <content type="html"><![CDATA[<h4 id="1-如何定义、交流和使用项目范围"><a href="#1-如何定义、交流和使用项目范围" class="headerlink" title="1.如何定义、交流和使用项目范围?"></a>1.如何定义、交流和使用项目范围?</h4><blockquote>
 <p>评估所有提议的产品特性和需求变更，以弄清楚确定它们是否 在与已写入文档的项目范围文档中的要求相符内。</p>
+</blockquote>
 <hr>
-<p>###2.如何确定产品的客户团体并描述其特性?</p>
+<h4 id="2-如何确定产品的客户团体并描述其特性"><a href="#2-如何确定产品的客户团体并描述其特性" class="headerlink" title="2.如何确定产品的客户团体并描述其特性?"></a>2.如何确定产品的客户团体并描述其特性?</h4><blockquote>
 <p>由项目涉众识别明显不同的用户类，在软件需求规格说明中对 这些用户类的特性做出概要说明。</p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<h4 id="3-如何获取用户的需求信息"><a href="#3-如何获取用户的需求信息" class="headerlink" title="3.如何获取用户的需求信息?"></a>3.如何获取用户的需求信息?</h4><blockquote>
+<p>代表不同用户类的特定人员参与项目，约定其的责任和权力。</p>
+</blockquote>
+<hr>
+<h4 id="4-需求分析人员所接受的培训情况如何-他们的经验如何"><a href="#4-需求分析人员所接受的培训情况如何-他们的经验如何" class="headerlink" title="4.需求分析人员所接受的培训情况如何?他们的经验如何?"></a>4.需求分析人员所接受的培训情况如何?他们的经验如何?</h4><blockquote>
+<p>我们有专业的业务分析人员或需求工程师，他们在与技术人员交流、 促进小组会谈和编写技术文档等方面接受过培训，并具有丰富的经验。 他们既了解应用领域，又熟知软件开发过程。</p>
+</blockquote>
 <hr>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;###1.如何定义、交流和使用项目范围?&lt;/p&gt;
+      &lt;h4 id=&quot;1-如何定义、交流和使用项目范围&quot;&gt;&lt;a href=&quot;#1-如何定义、交流和使用项目范围&quot; class=&quot;headerlink&quot; title=&quot;1.如何定义、交流和使用项目范围?&quot;&gt;&lt;/a&gt;1.如何定义、交流和使用项目范围?&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;评估所有提议的产品特性和需求变更，以弄清楚确定它们是否 在与已写入文档的项目范围文档中的要求相符内。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;p&gt;###2.如何确定产品的客户团体并描述其特性?&lt;/p&gt;
-&lt;p&gt;由项目涉众识别明显不同的用户类
+&lt;h4 id=&quot;2-如何确定产品的客户团体并描述其特性&quot;&gt;&lt;a href=&quot;#2-如何确定产品的客户团体并描述其特性&quot; class=&quot;headerlink&quot; title=&quot;2.如何确定产品的客户团体并描述其特性?&quot;&gt;&lt;/a&gt;2.如何确定产品的客户团体并描述其特性?&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;由项目涉众识别明显不同的用户类，在软件需求规格说明中对 这些用户类的特性做出概要说明。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
     
     </summary>
+    
+      <category term="需求工程" scheme="http://www.lbinin.com/categories/%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B/"/>
     
     
   </entry>
