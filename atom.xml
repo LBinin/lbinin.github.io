@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-05-30T03:30:04.000Z</updated>
+  <updated>2017-05-30T03:41:54.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.lbinin.com/2017/05/29/%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%E5%A4%8D%E4%B9%A0-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98/"/>
     <id>http://www.lbinin.com/2017/05/29/需求工程复习-课后习题/</id>
     <published>2017-05-29T12:33:38.000Z</published>
-    <updated>2017-05-30T03:30:04.000Z</updated>
+    <updated>2017-05-30T03:41:54.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-1-软件需求的定义是什么"><a href="#1-1-软件需求的定义是什么" class="headerlink" title="1.1 软件需求的定义是什么?"></a>1.1 软件需求的定义是什么?</h4><blockquote>
 <p>(1) 用户解决问题或达到目标所需的条件或能力 <code>用户的角度</code><br>(2) 系统或系统部件要满足合同、标准、 规范或其它正式规定文档所需具有的条件或能力 <code>软件系统的角度</code><br>(3) 对 <strong>(1)</strong> 和 <strong>(2)</strong> 中所描述的条件或能力的文档化表示。</p>
@@ -114,6 +114,26 @@
 <p>双赢能够提高合作和交流的效率，从而提高软件的开发速度和质量，使软件开发人员能更好的了解用户的各种需求，从而制定出合理的方案，用户能够得到想要的软件。</p>
 </blockquote>
 <hr>
+<h4 id="4-1-两个利益相关者提出的需求相互冲突时，你会如何解决？"><a href="#4-1-两个利益相关者提出的需求相互冲突时，你会如何解决？" class="headerlink" title="4.1 两个利益相关者提出的需求相互冲突时，你会如何解决？"></a>4.1 两个利益相关者提出的需求相互冲突时，你会如何解决？</h4><blockquote>
+<ol>
+<li>通过协商找到问题冲突的解决方案</li>
+<li>通过需求排优先序解决冲突</li>
+<li>通过创造性解决方案解决冲突</li>
+<li>通过上司解决冲突</li>
+</ol>
+</blockquote>
+<h4 id="4-5-请说明需求分析的步骤"><a href="#4-5-请说明需求分析的步骤" class="headerlink" title="4.5 请说明需求分析的步骤"></a>4.5 请说明需求分析的步骤</h4><blockquote>
+<ol>
+<li>整理产品前景与项目范围</li>
+<li>建立系统关联图</li>
+<li>分析需求的可行性</li>
+<li>构建用户接口原型</li>
+<li>确定需求的优先级</li>
+<li>协调不一致的需求</li>
+<li>需求建模</li>
+<li>建立数据词典</li>
+</ol>
+</blockquote>
 ]]></content>
     
     <summary type="html">
