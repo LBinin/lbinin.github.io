@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-05-30T03:52:47.000Z</updated>
+  <updated>2017-05-30T05:20:21.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -16,11 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>需求工程复习</title>
+    <link href="http://www.lbinin.com/2017/05/30/%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://www.lbinin.com/2017/05/30/需求工程复习/</id>
+    <published>2017-05-30T05:16:48.000Z</published>
+    <updated>2017-05-30T05:20:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>####需求工程概述<br><img src="/2017/05/30/需求工程复习/需求工程概述.png" alt="需求工程概述"></p>
+<p>####软件工程与需求工程<br><img src="/2017/05/30/需求工程复习/软件工程与需求工程.png" alt="软件工程与需求工程"></p>
+<p>####需求获取<br><img src="/2017/05/30/需求工程复习/需求获取.png" alt="需求获取"></p>
+<p>####需求分析<br><img src="/2017/05/30/需求工程复习/需求分析.png" alt="需求分析"></p>
+<p>####需求建模方法与技术1<br><img src="/2017/05/30/需求工程复习/需求建模方法与技术1.png" alt="需求建模方法与技术1"></p>
+<p>####需求定义<br><img src="/2017/05/30/需求工程复习/需求定义.png" alt="需求定义"></p>
+<p>####需求验证<br><img src="/2017/05/30/需求工程复习/需求验证.png" alt="需求验证"></p>
+<p>####需求管理<br><img src="/2017/05/30/需求工程复习/需求管理.png" alt="需求管理"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####需求工程概述&lt;br&gt;&lt;img src=&quot;/2017/05/30/需求工程复习/需求工程概述.png&quot; alt=&quot;需求工程概述&quot;&gt;&lt;/p&gt;
+&lt;p&gt;####软件工程与需求工程&lt;br&gt;&lt;img src=&quot;/2017/05/30/需求工程复习/软件工程与需求工程.png&quot; 
+    
+    </summary>
+    
+      <category term="需求工程" scheme="http://www.lbinin.com/categories/%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>需求工程复习-课后习题</title>
     <link href="http://www.lbinin.com/2017/05/29/%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%E5%A4%8D%E4%B9%A0-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98/"/>
     <id>http://www.lbinin.com/2017/05/29/需求工程复习-课后习题/</id>
     <published>2017-05-29T12:33:38.000Z</published>
-    <updated>2017-05-30T03:52:47.000Z</updated>
+    <updated>2017-05-30T05:14:05.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-1-软件需求的定义是什么"><a href="#1-1-软件需求的定义是什么" class="headerlink" title="1.1 软件需求的定义是什么?"></a>1.1 软件需求的定义是什么?</h4><blockquote>
 <p>(1) 用户解决问题或达到目标所需的条件或能力 <code>用户的角度</code><br>(2) 系统或系统部件要满足合同、标准、 规范或其它正式规定文档所需具有的条件或能力 <code>软件系统的角度</code><br>(3) 对 <strong>(1)</strong> 和 <strong>(2)</strong> 中所描述的条件或能力的文档化表示。</p>
@@ -135,7 +164,7 @@
 </ol>
 </blockquote>
 <hr>
-<h4 id="为如下活动开发一个完整的用例"><a href="#为如下活动开发一个完整的用例" class="headerlink" title="为如下活动开发一个完整的用例"></a>为如下活动开发一个完整的用例</h4><ol>
+<h4 id="5-2-为如下活动开发一个完整的用例"><a href="#5-2-为如下活动开发一个完整的用例" class="headerlink" title="5.2 为如下活动开发一个完整的用例"></a>5.2 为如下活动开发一个完整的用例</h4><ol>
 <li><strong>在ATM上存款</strong></li>
 <li><strong>在食堂使用就餐卡付费</strong></li>
 <li><strong>使用在线书店购书</strong></li>
