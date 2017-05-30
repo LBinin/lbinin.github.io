@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-05-30T03:41:54.000Z</updated>
+  <updated>2017-05-30T03:45:13.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.lbinin.com/2017/05/29/%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B%E5%A4%8D%E4%B9%A0-%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98/"/>
     <id>http://www.lbinin.com/2017/05/29/需求工程复习-课后习题/</id>
     <published>2017-05-29T12:33:38.000Z</published>
-    <updated>2017-05-30T03:41:54.000Z</updated>
+    <updated>2017-05-30T03:45:13.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-1-软件需求的定义是什么"><a href="#1-1-软件需求的定义是什么" class="headerlink" title="1.1 软件需求的定义是什么?"></a>1.1 软件需求的定义是什么?</h4><blockquote>
 <p>(1) 用户解决问题或达到目标所需的条件或能力 <code>用户的角度</code><br>(2) 系统或系统部件要满足合同、标准、 规范或其它正式规定文档所需具有的条件或能力 <code>软件系统的角度</code><br>(3) 对 <strong>(1)</strong> 和 <strong>(2)</strong> 中所描述的条件或能力的文档化表示。</p>
@@ -133,6 +133,25 @@
 <li>需求建模</li>
 <li>建立数据词典</li>
 </ol>
+</blockquote>
+<hr>
+<h4 id="为如下活动开发一个完整的用例"><a href="#为如下活动开发一个完整的用例" class="headerlink" title="为如下活动开发一个完整的用例"></a>为如下活动开发一个完整的用例</h4><ol>
+<li><strong>在ATM上存款</strong></li>
+<li><strong>在食堂使用就餐卡付费</strong></li>
+<li><strong>使用在线书店购书</strong></li>
+</ol>
+<blockquote>
+<p>在ATM存款</p>
+<ul>
+<li><p><strong>在显示屏上显示问候信息</strong><br>用户将持卡插入ATM<br>ATM读出磁卡的内容，并检索该卡能否使用<br>如果磁卡能够使用，ATM要求用户输入密码</p>
+</li>
+<li><p><strong>等待密码输入</strong><br>用户输入密码<br>如果密码正确，ATM请求用户做出要处理的业务选项</p>
+</li>
+<li><p><strong>等待输入处理的业务选项</strong><br>用户选择存现金<br>ATM打开存现口</p>
+</li>
+<li><p><strong>等待用户放入现金</strong><br>用户放入现金<br>ATM收取现金，检验真假以及数钞<br>如果全是真钞并确认好数量，根据银行卡账号向银行请求存款信息<br>ATM完成存款<br>ATM向用户返还磁卡<br>ATM打印票单</p>
+</li>
+</ul>
 </blockquote>
 ]]></content>
     
