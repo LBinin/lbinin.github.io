@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-06-07T02:13:10.000Z</updated>
+  <updated>2017-07-02T03:33:35.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -16,11 +16,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mac下CocoaPods安装和使用教程</title>
+    <link href="http://www.lbinin.com/2017/07/02/Mac%E4%B8%8B%E5%AE%89%E8%A3%85CocoaPods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>http://www.lbinin.com/2017/07/02/Mac下安装CocoaPods安装和使用教程/</id>
+    <published>2017-07-02T02:13:53.000Z</published>
+    <updated>2017-07-02T03:33:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是CocoaPods"><a href="#什么是CocoaPods" class="headerlink" title="什么是CocoaPods"></a>什么是CocoaPods</h2><blockquote>
+<p>当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，所以要使用它，必须得另外下载其他类库。手动下载所需类库十分麻烦。另外一种常见情况是，你项目中用到的类库有更新，你必须得重新下载新版本，重新加入到项目中，十分麻烦。所以，你需要 CocoaPods来帮你解决这些恼人的问题。</p>
+</blockquote>
+<h2 id="安装CocoaPods"><a href="#安装CocoaPods" class="headerlink" title="安装CocoaPods"></a>安装CocoaPods</h2><p>打开 <strong>Terminal</strong>，然后按照以下提示操作即可：</p>
+<h3 id="1-设置ruby的软件源"><a href="#1-设置ruby的软件源" class="headerlink" title="1. 设置ruby的软件源"></a>1. 设置ruby的软件源</h3><p>至于如何安装ruby自行百度~</p>
+<p>因为ruby的软件源 <strong>rubygems.org</strong> 因为使用亚马逊的云服务被天朝屏蔽啦，这里我们更新一下ruby的源。</p>
+<p>国内ruby源地址：<a href="https://gems.ruby-china.org/" target="_blank" rel="external">RubyGems 镜像- Ruby China</a></p>
+<p>建议gem版本2.6以上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ gem update --system <span class="comment"># 这里需要翻墙给信翻墙一下</span></div><div class="line">$ gem -v              <span class="comment"># 查看版本</span></div></pre></td></tr></table></figure>
+<p>更新ruby源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ gem sources <span class="_">-l</span>                                 <span class="comment">#(查看当前ruby的源)</span></div><div class="line">$ gem sources --remove https://rubygems.org/     <span class="comment"># 移除当前ruby的源</span></div><div class="line">$ gem sources --add https://gems.ruby-china.org/ <span class="comment"># 设置当前ruby的源为国内的</span></div><div class="line">$ gem sources <span class="_">-l</span>                                 <span class="comment"># 请确保其下只有 gems.ruby-china.org</span></div></pre></td></tr></table></figure>
+<h3 id="2-安装Cocoapods"><a href="#2-安装Cocoapods" class="headerlink" title="2. 安装Cocoapods"></a>2. 安装Cocoapods</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo gem install cocoapods <span class="comment"># 安装Cocoapods</span></div></pre></td></tr></table></figure>
+<p>如果报以下错误：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ERROR:  While executing gem ... (Errno::EPERM)</div><div class="line">Operation not permitted - /usr/bin/xcodeproj</div></pre></td></tr></table></figure>
+<p>解决方案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/<span class="built_in">local</span>/bin cocoapods</div><div class="line">pod setup</div></pre></td></tr></table></figure>
+<p>pod setup在执行时，会输出Setting up CocoaPods master repo，但是会等待比较久的时间。这步其实是 Cocoapods 在将它的信息下载到 ~/.cocoapods目录下，如果你等太久，可以试着 cd 到那个目录，用du -sh *来查看下载进度。</p>
+<hr>
+<blockquote>
+<p>###参考资料：<br><a href="https://devlong.com/2017/03/12/pod-setup-wait-too-long-time/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">pod setup命令失败解决方法</a> <em>——作者：Mellong</em></p>
+<p><a href="http://www.jianshu.com/p/b64b4fd08d3c" target="_blank" rel="external">最新 macOS Sierra 10.12.3 安装CocoaPods及使用详解</a> <em>——作者：这小小的葡萄我还从来没吃过</em></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是CocoaPods&quot;&gt;&lt;a href=&quot;#什么是CocoaPods&quot; class=&quot;headerlink&quot; title=&quot;什么是CocoaPods&quot;&gt;&lt;/a&gt;什么是CocoaPods&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;当你开发iOS应用时，会经常使用到
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.lbinin.com/categories/Mac/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>遗传算法解决函数最大值问题</title>
     <link href="http://www.lbinin.com/2017/06/07/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E5%87%BD%E6%95%B0%E6%9C%80%E5%A4%A7%E5%80%BC%E9%97%AE%E9%A2%98/"/>
     <id>http://www.lbinin.com/2017/06/07/遗传算法解决函数最大值问题/</id>
     <published>2017-06-07T02:09:26.000Z</published>
-    <updated>2017-06-07T02:13:10.000Z</updated>
+    <updated>2017-06-07T02:13:43.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="js版本："><a href="#js版本：" class="headerlink" title="js版本："></a>js版本：</h3><p>相应注释已经写上，具体分析等考完试再写-=-</p>
 <a id="more"></a>
