@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-07-02T03:33:35.000Z</updated>
+  <updated>2017-07-06T14:03:00.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -16,11 +16,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端规范</title>
+    <link href="http://www.lbinin.com/2017/07/06/%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/"/>
+    <id>http://www.lbinin.com/2017/07/06/前端规范/</id>
+    <published>2017-07-06T13:54:27.000Z</published>
+    <updated>2017-07-06T14:03:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CSS命名规范："><a href="#CSS命名规范：" class="headerlink" title="CSS命名规范："></a>CSS命名规范：</h2><ol>
+<li><p>名称用英文，尽量避免拼音。</p>
+</li>
+<li><p>全小写，单词之间用减号“-”连接，如：</p>
+<pre><code class="css"><span class="selector-class">.home-page</span>
+<span class="selector-class">.footer-content</span>
+</code></pre>
+</li>
+<li><p>为了代码的易读性，在每个声明块的左花括号前添加一个空格。如：</p>
+</li>
+</ol>
+<pre><code>```css
+.selector {
+    padding: 15px;
+    margin: 10px;
+}
+```
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;CSS命名规范：&quot;&gt;&lt;a href=&quot;#CSS命名规范：&quot; class=&quot;headerlink&quot; title=&quot;CSS命名规范：&quot;&gt;&lt;/a&gt;CSS命名规范：&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;名称用英文，尽量避免拼音。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;全小写，单词
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.lbinin.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Mac下CocoaPods安装和使用教程</title>
     <link href="http://www.lbinin.com/2017/07/02/Mac%E4%B8%8B%E5%AE%89%E8%A3%85CocoaPods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://www.lbinin.com/2017/07/02/Mac下安装CocoaPods安装和使用教程/</id>
     <published>2017-07-02T02:13:53.000Z</published>
-    <updated>2017-07-02T03:33:35.000Z</updated>
+    <updated>2017-07-02T09:36:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是CocoaPods"><a href="#什么是CocoaPods" class="headerlink" title="什么是CocoaPods"></a>什么是CocoaPods</h2><blockquote>
 <p>当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，所以要使用它，必须得另外下载其他类库。手动下载所需类库十分麻烦。另外一种常见情况是，你项目中用到的类库有更新，你必须得重新下载新版本，重新加入到项目中，十分麻烦。所以，你需要 CocoaPods来帮你解决这些恼人的问题。</p>
