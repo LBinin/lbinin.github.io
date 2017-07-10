@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.lbinin.com/2017/07/06/%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/</loc>
+    <loc>http://www.lbinin.com/2017/04/15/server-Nginx-domain/</loc>
     
-    <lastmod>2017-07-06T14:03:00.000Z</lastmod>
+    <lastmod>2017-07-10T03:12:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.lbinin.com/2017/07/09/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%BD%91%E9%A1%B5%E7%89%88%E7%A0%B4%E8%A7%A3%E7%AA%81%E7%A0%B4%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</loc>
+    
+    <lastmod>2017-07-09T15:39:19.000Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>http://www.lbinin.com/2017/04/15/server-mysql/</loc>
     
     <lastmod>2017-05-02T07:16:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.lbinin.com/2017/04/15/server-Nginx-domain/</loc>
-    
-    <lastmod>2017-05-02T07:16:08.000Z</lastmod>
     
   </url>
   
