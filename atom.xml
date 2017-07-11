@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-07-09T15:39:19.000Z</updated>
+  <updated>2017-07-11T01:58:47.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -16,17 +16,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>百度网盘网页版破解突破下载速度</title>
-    <link href="http://www.lbinin.com/2017/07/09/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%BD%91%E9%A1%B5%E7%89%88%E7%A0%B4%E8%A7%A3%E7%AA%81%E7%A0%B4%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/"/>
-    <id>http://www.lbinin.com/2017/07/09/百度网盘网页版破解突破下载速度/</id>
+    <title>Mac百度网盘（网页版）破解突破下载速度限制</title>
+    <link href="http://www.lbinin.com/2017/07/09/Mac%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%EF%BC%88%E7%BD%91%E9%A1%B5%E7%89%88%EF%BC%89%E7%A0%B4%E8%A7%A3%E7%AA%81%E7%A0%B4%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%99%90%E5%88%B6/"/>
+    <id>http://www.lbinin.com/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/</id>
     <published>2017-07-09T14:55:58.000Z</published>
-    <updated>2017-07-09T15:39:19.000Z</updated>
+    <updated>2017-07-11T01:58:47.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol>
 <li>Mac下载神器: Aria2</li>
-<li>Chrome浏览器（安装插件使用）</li>
+<li>Chrome浏览器（供安装插件使用）</li>
 </ol>
-<p>下载地址：</p>
+<p>下载地址：<a href="http://software.lbinin.com/aira2/aria2+chrome.dmg" target="_blank" rel="external">http://software.lbinin.com/aira2/aria2+chrome.dmg</a></p>
 <hr>
 <h2 id="Aria2特性"><a href="#Aria2特性" class="headerlink" title="Aria2特性"></a>Aria2特性</h2><ul>
 <li>支持多协议：HTTP/HTTPS，FTP，SFTP，BitTorrent和Metalink。</li>
@@ -36,15 +36,50 @@
 <li>支持RPC界面远程控制。</li>
 </ul>
 <hr>
-<h2 id="Aria2安装"><a href="#Aria2安装" class="headerlink" title="Aria2安装"></a>Aria2安装</h2>]]></content>
+<h2 id="Aria2安装"><a href="#Aria2安装" class="headerlink" title="Aria2安装"></a>Aria2安装</h2><ol>
+<li><p>下载上方 <strong><code>aria2+chrome.dmg</code></strong></p>
+</li>
+<li><p>建议将文件放到桌面的新建文件夹如 <code>桌面\百度网盘</code>，方便日后使用</p>
+</li>
+<li><p>将dmg文件内 <strong><code>Aria2GUI</code></strong> 和 <strong><code>BaiduExporter-master</code></strong> 文件复制到文件夹内</p>
+</li>
+<li><p>打开Chrome浏览器，打开 <code>更多工具 &gt; 扩展程序</code><br> <img src="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/3.png" alt="扩展程序"></p>
+</li>
+<li><p>选中 <code>开发者模式</code>，点击 <code>加载已解压的扩展程序</code>，选择刚刚提取出来的<strong>BaiduExporter-master</strong>下的 <code>chrome</code> 文件夹 <strong>或者</strong> 将 <code>chrome</code> 文件夹直接拖入 <code>扩展程序</code> 页面以安装插件。</p>
+<p> <img src="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/4.png" alt="加载已解压的扩展程序"></p>
+</li>
+<li><p>安装好后显示 <code>网盘助手</code><br> <img src="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/5.png" alt="网盘助手"></p>
+</li>
+<li><p>重启浏览器</p>
+</li>
+<li><p>建议将 <strong><code>Aria2GUI</code></strong> 程序锁定在Dock栏中方便使用。</p>
+</li>
+</ol>
+<hr>
+<h2 id="Aria2使用方法"><a href="#Aria2使用方法" class="headerlink" title="Aria2使用方法"></a>Aria2使用方法</h2><ol>
+<li><p>登录百度网盘网页版：<a href="https://pan.baidu.com" target="_blank" rel="external">https://pan.baidu.com</a></p>
+</li>
+<li><p>启动 <strong><code>Aria2GUI</code></strong> 应用程序</p>
+</li>
+<li><p>选中你要下载的文件或者文件夹</p>
+</li>
+<li><p>鼠标移至上方的 <strong><code>导出下载</code></strong>，这时候出现了一个 <strong><code>AIRA2 RPC</code></strong>，点击下载</p>
+</li>
+<li><p>OK，任务已经添加到 Aira2 中啦，可以看到速度比起百度网盘下载快多了~<br> <img src="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/1.png" alt="下载界面1"></p>
+ <center>总下载速度已经到了 12MB/s （开启任务上限为20，网络环境：校园网）</center>
+
+<p> <img src="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/2.png" alt="下载界面2"></p>
+ <center>万恶的百度云~</center></li>
+</ol>
+]]></content>
     
     <summary type="html">
     
       &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;Mac下载神器: Aria2&lt;/li&gt;
-&lt;li&gt;Chrome浏览器（安装插件使用）&lt;/li&gt;
+&lt;li&gt;Chrome浏览器（供安装插件使用）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;下载地址：&lt;/p
+&lt;p&gt;下载地址：&lt;a
     
     </summary>
     
