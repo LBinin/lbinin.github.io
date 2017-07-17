@@ -15,12 +15,25 @@
 <p>解决方案：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/<span class="built_in">local</span>/bin cocoapods</div><div class="line">pod setup</div></pre></td></tr></table></figure>
 <p>pod setup在执行时，会输出Setting up CocoaPods master repo，但是会等待比较久的时间。这步其实是 Cocoapods 在将它的信息下载到 ~/.cocoapods目录下，如果你等太久，可以试着 cd 到那个目录，用du -sh *来查看下载进度。</p>
+<h2 id="CocoaPods使用方法"><a href="#CocoaPods使用方法" class="headerlink" title="CocoaPods使用方法"></a>CocoaPods使用方法</h2><ol>
+<li><p>在 <code>*.xcodeproj</code> 的同级目录下，创建 <code>Podfile</code> 的无后缀文件，在其中写入</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">use_frameworks! # LeanCloud Swift SDK 只能作为动态框架集成到项目中</div><div class="line"></div><div class="line">target &apos;项目名称&apos; do</div><div class="line">pod &apos;模块名称&apos;</div><div class="line">pod &apos;模块名称&apos;</div><div class="line">pod &apos;模块名称&apos;</div><div class="line"></div><div class="line">end</div></pre></td></tr></table></figure>
+</li>
+<li><p>打开 <code>terminal</code> 中进入到项目的目录</p>
+</li>
+<li><p>使用 <code>pod install</code> 命令安装所需模块和依赖</p>
+</li>
+<li><p>安装好后就可以在项目中看到名为 <code>Pods</code> 的target了</p>
+</li>
+<li><p>之后可以使用相关模块的API了</p>
+</li>
+</ol>
 <hr>
 <blockquote>
 <p>###参考资料：<br><a href="https://devlong.com/2017/03/12/pod-setup-wait-too-long-time/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">pod setup命令失败解决方法</a> <em>——作者：Mellong</em></p>
 <p><a href="http://www.jianshu.com/p/b64b4fd08d3c" target="_blank" rel="external">最新 macOS Sierra 10.12.3 安装CocoaPods及使用详解</a> <em>——作者：这小小的葡萄我还从来没吃过</em></p>
 </blockquote>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/07/02/Mac下安装CocoaPods安装和使用教程/" data-id="cj4zlrpt600018v343sz83c7a" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/" class="pre">Mac百度网盘（网页版）破解突破下载速度限制</a><a href="/2017/06/07/遗传算法解决函数最大值问题/" class="next">遗传算法解决函数最大值问题</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/07/02/Mac下安装CocoaPods安装和使用教程/" data-id="cj57km7670001td34qzcmyha0" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/" class="pre">Mac百度网盘（网页版）破解突破下载速度限制</a><a href="/2017/06/07/遗传算法解决函数最大值问题/" class="next">遗传算法解决函数最大值问题</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
   url: document.location.href,
   productKey: "b94647f00f4b4571b00b47f06d9ea163## Your gentie_productKey, e.g. fc799538c7ad4cf5a5a0c2877a90cbd7",
   target: "cloud-tie-wrapper"
