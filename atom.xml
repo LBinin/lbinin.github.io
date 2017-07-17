@@ -98,7 +98,7 @@
     <link href="http://www.lbinin.com/2017/07/02/Mac%E4%B8%8B%E5%AE%89%E8%A3%85CocoaPods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://www.lbinin.com/2017/07/02/Mac下安装CocoaPods安装和使用教程/</id>
     <published>2017-07-02T02:13:53.000Z</published>
-    <updated>2017-07-17T03:08:22.000Z</updated>
+    <updated>2017-07-17T03:11:53.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是CocoaPods"><a href="#什么是CocoaPods" class="headerlink" title="什么是CocoaPods"></a>什么是CocoaPods</h2><blockquote>
 <p>当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，所以要使用它，必须得另外下载其他类库。手动下载所需类库十分麻烦。另外一种常见情况是，你项目中用到的类库有更新，你必须得重新下载新版本，重新加入到项目中，十分麻烦。所以，你需要 CocoaPods来帮你解决这些恼人的问题。</p>
@@ -135,6 +135,9 @@
 <p>###参考资料：<br><a href="https://devlong.com/2017/03/12/pod-setup-wait-too-long-time/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">pod setup命令失败解决方法</a> <em>——作者：Mellong</em></p>
 <p><a href="http://www.jianshu.com/p/b64b4fd08d3c" target="_blank" rel="external">最新 macOS Sierra 10.12.3 安装CocoaPods及使用详解</a> <em>——作者：这小小的葡萄我还从来没吃过</em></p>
 </blockquote>
+<p>发布时间: 2017-07-02 10:13:53</p>
+<p>原始链接: <a href="http://blog.lbinin.com/2017/07/02/Mac%E4%B8%8B%E5%AE%89%E8%A3%85CocoaPods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" target="_blank" rel="external">Mac下CocoaPods安装和使用教程</a></p>
+<p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 ]]></content>
     
     <summary type="html">
