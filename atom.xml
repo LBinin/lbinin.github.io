@@ -98,7 +98,7 @@
     <link href="http://www.lbinin.com/2017/07/02/Mac%E4%B8%8B%E5%AE%89%E8%A3%85CocoaPods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://www.lbinin.com/2017/07/02/Mac下安装CocoaPods安装和使用教程/</id>
     <published>2017-07-02T02:13:53.000Z</published>
-    <updated>2017-07-17T03:11:53.000Z</updated>
+    <updated>2017-08-05T17:08:16.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是CocoaPods"><a href="#什么是CocoaPods" class="headerlink" title="什么是CocoaPods"></a>什么是CocoaPods</h2><blockquote>
 <p>当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，所以要使用它，必须得另外下载其他类库。手动下载所需类库十分麻烦。另外一种常见情况是，你项目中用到的类库有更新，你必须得重新下载新版本，重新加入到项目中，十分麻烦。所以，你需要 CocoaPods来帮你解决这些恼人的问题。</p>
@@ -119,7 +119,7 @@
 <p>pod setup在执行时，会输出Setting up CocoaPods master repo，但是会等待比较久的时间。这步其实是 Cocoapods 在将它的信息下载到 ~/.cocoapods目录下，如果你等太久，可以试着 cd 到那个目录，用du -sh *来查看下载进度。</p>
 <h2 id="CocoaPods使用方法"><a href="#CocoaPods使用方法" class="headerlink" title="CocoaPods使用方法"></a>CocoaPods使用方法</h2><ol>
 <li><p>在 <code>*.xcodeproj</code> 的同级目录下，创建 <code>Podfile</code> 的无后缀文件，在其中写入</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">use_frameworks! # LeanCloud Swift SDK 只能作为动态框架集成到项目中</div><div class="line"></div><div class="line">target &apos;项目名称&apos; do</div><div class="line">pod &apos;模块名称&apos;</div><div class="line">pod &apos;模块名称&apos;</div><div class="line">pod &apos;模块名称&apos;</div><div class="line"></div><div class="line">end</div></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">use_frameworks!</div><div class="line"></div><div class="line">target &apos;项目名称&apos; do</div><div class="line">	pod &apos;模块名称&apos;</div><div class="line">	pod &apos;模块名称&apos;</div><div class="line">	pod &apos;模块名称&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
 </li>
 <li><p>打开 <code>terminal</code> 中进入到项目的目录</p>
 </li>
