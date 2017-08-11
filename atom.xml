@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-08-11T10:22:47.000Z</updated>
+  <updated>2017-08-11T10:29:56.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.lbinin.com/2017/08/11/Swift%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E5%BA%93SnapKit%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/"/>
     <id>http://www.lbinin.com/2017/08/11/Swift自动布局库SnapKit使用介绍/</id>
     <published>2017-08-11T10:12:52.000Z</published>
-    <updated>2017-08-11T10:22:47.000Z</updated>
+    <updated>2017-08-11T10:29:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="SnapKit介绍"><a href="#SnapKit介绍" class="headerlink" title="SnapKit介绍"></a>SnapKit介绍</h2><p>SnapKit是一个优秀的第三方自适应布局库，它可以让iOS、OS X应用更简单地实现自动布局（Auto Layout）</p>
 <p>GtiHub地址：<a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="external">https://github.com/SnapKit/SnapKit</a></p>
@@ -29,9 +29,20 @@
 <p><a href="http://blog.lbinin.com/2017/07/02/Mac%E4%B8%8B%E5%AE%89%E8%A3%85CocoaPods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" target="_blank" rel="external">Mac下安装CocoaPods安装和使用教程</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">use_frameworks!</div><div class="line"></div><div class="line">target &apos;&lt;Your Target Name&gt;&apos; do</div><div class="line">    pod &apos;SnapKit&apos;, &apos;~&gt; 3.2.0&apos;</div><div class="line">end</div></pre></td></tr></table></figure>
 <h2 id="SnapKit使用"><a href="#SnapKit使用" class="headerlink" title="SnapKit使用"></a>SnapKit使用</h2><p>在屏幕中间放置一个100*100的正方形</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MeVC</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="built_in">lazy</span> <span class="keyword">var</span> box = <span class="type">UIView</span>()</div><div class="line">  </div><div class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="keyword">super</span>.viewDidLoad()</div><div class="line">    </div><div class="line">    box.backgroundColor = <span class="type">UIColor</span>.orange</div><div class="line">    <span class="keyword">self</span>.view.addSubview(box)</div><div class="line">    </div><div class="line">    box.snp.makeConstraints &#123; (<span class="type">ConstraintMaker</span>) <span class="keyword">in</span></div><div class="line">	   <span class="type">ConstraintMaker</span>.width.equalTo(<span class="number">100</span>)</div><div class="line">	   <span class="type">ConstraintMaker</span>.height.equalTo(<span class="number">100</span>)</div><div class="line">	   <span class="comment">// 以上两句可以合成为一句 ConstraintMaker.width.height.equalTo(100)</span></div><div class="line">	   <span class="type">ConstraintMaker</span>.center.equalTo(<span class="keyword">self</span>.view)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MeVC</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="built_in">lazy</span> <span class="keyword">var</span> box = <span class="type">UIView</span>()</div><div class="line">  </div><div class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="keyword">super</span>.viewDidLoad()</div><div class="line">    </div><div class="line">    box.backgroundColor = <span class="type">UIColor</span>.orange</div><div class="line">    <span class="keyword">self</span>.view.addSubview(box)</div><div class="line">    </div><div class="line">    box.snp.makeConstraints &#123; (make) <span class="keyword">in</span></div><div class="line">		make.width.equalTo(<span class="number">100</span>)</div><div class="line">		make.height.equalTo(<span class="number">100</span>)</div><div class="line">		<span class="comment">// 以上两句可以合成为一句 make.width.height.equalTo(100)</span></div><div class="line">		make.center.equalTo(<span class="keyword">self</span>.view)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过 <strong><code>snp.makeConstraints</code></strong> 方法给view添加约束，约束有几种，分别是 <strong>边距</strong>，<strong>宽</strong>，<strong>高</strong>，<strong>左上右下距离</strong>，<strong>基准线</strong>。同时，添加过约束后可以有修正，修正有位移修正（<strong>inset</strong>、<strong>offset</strong>）和倍率修正（<strong>multipliedBy</strong>）</p>
+<pre><code>语法一般是： **make.equalTo** 或 **make.greaterThanOrEqualTo** 或 **make.lessThanOrEqualTo** + 倍数和位移修正。
+
+- equalTo：等于 
+- lessThanOrEqualTo：小于等于
+- greaterThanOrEqualTo：大于等于
+</code></pre><p>如有疏漏或错误欢迎指正~</p>
+<blockquote>
+<p>###参考资料：<br>Swift - 自动布局库SnapKit的使用详解: <a href="http://www.hangge.com/blog/cache/detail_1097.html" target="_blank" rel="external">http://www.hangge.com/blog/cache/detail_1097.html</a></p>
+</blockquote>
+<hr>
 <p>发布时间: 2017-08-11 18:12:52</p>
-<p>原始链接: <a href="http://blog.lbinin.com/2017/07/02/Mac%E4%B8%8B%E5%AE%89%E8%A3%85CocoaPods%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" target="_blank" rel="external">Mac下CocoaPods安装和使用教程</a></p>
+<p>原始链接: <a href="http://blog.lbinin.com/2017/08/11/Swift%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E5%BA%93SnapKit%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/" target="_blank" rel="external">Swift自动布局库SnapKit使用介绍</a></p>
 <p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 ]]></content>
     
