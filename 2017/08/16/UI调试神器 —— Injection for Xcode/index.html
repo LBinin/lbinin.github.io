@@ -27,8 +27,8 @@
 <p>以Swift为例，在项目目录下创建文件名为 <strong>main.m</strong> 的文件，然后选择 <strong>“Product”</strong> -&gt; <strong>“Injection Plugin”</strong> -&gt; <strong>“Patch project for injection”</strong></p>
 <p>之后会在 <strong>main.m</strong> 文件中添加几行代码，这并不会对你的程序有任何的影响。</p>
 <p>编辑任意一个界面控制文件，修改内容后，按下 <strong>Ctrl + =</strong> 快捷键，可以看到左上方有一个进度条，此时就可以看到界面的更改啦~</p>
-<h2 id="注意实现"><a href="#注意实现" class="headerlink" title="注意实现"></a>注意实现</h2><p>刚开始的时候我编辑的配置文件，因为在一些控制器里面会读取到这些内容，所以我在打开配置文件的情况下按下快捷键 <strong>Ctrl + =</strong>，结果出错，经过一上午的捣鼓，发现这款插件要在控制器文件下使用，比如：你更改了配置文件，你要在相应界面的ViewController下去 <strong>Ctrl + =</strong>，才会不报错。</p>
-<p>在我打开ViewController的情况下，更改了内容，但是按下 <strong>Ctrl + =</strong>，提示以下信息，并且页面没有任何变化。</p>
+<h2 id="注意实现"><a href="#注意实现" class="headerlink" title="注意实现"></a>注意实现</h2><p>刚开始的时候我编辑的配置文件，因为在一些控制器里面会读取到这些内容，所以我在打开配置文件的情况下按下快捷键 <strong><code>Ctrl + =</code></strong>，结果出错，经过一上午的捣鼓，发现这款插件要在控制器文件下使用，比如：你更改了配置文件，你要在相应界面的ViewController下去 <strong><code>Ctrl + =</code></strong>，才会不报错。</p>
+<p>在我打开ViewController的情况下，更改了内容，但是按下 <strong><code>Ctrl + =</code></strong>，提示以下信息，并且页面没有任何变化。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Compiling /Users/abc1/Desktop/GongGongiOS/GongGong/GongGong/MeVC.swift</div><div class="line">objc[5630]: Class _TtC8GongGong4MeVC is implemented in both /Users/abc1/Library/Developer/CoreSimulator/Devices/3EABA886-CFF9-42CE-B269-757BD06797E5/data/Containers/Bundle/Application/97B1C2C4-AD99-444B-8A20-0E62445CF226/GongGong.app/GongGong (0x109e985d0) and /Users/abc1/Desktop/GongGongiOS/GongGong/iOSInjectionProject/build/Debug-iphonesimulator/InjectionBundle11.bundle/InjectionBundle (0x11f1cf3b0). One of the two will be used. Which one is undefined.</div><div class="line">2017-08-16 11:42:32.171 GongGong[5630:203662] Ignore any warning, Swizzled GongGong.MeVC 0x11f1cf3b0 -&gt; 0x109e985d0</div></pre></td></tr></table></figure>
 <p>到作者的issue上看到了类似的问题: <a href="https://github.com/johnno1962/injectionforxcode/issues/93" target="_blank" rel="external">my injection doesn’t work</a></p>
 <p>作者对这个warning给出的解释大概是可以无视这个warning -=-</p>
@@ -38,14 +38,8 @@
 <p>Callbacks in Your Code</p>
 <p>You can build on top of Injection from three callbacks:</p>
 <ul>
-<li><ul>
-<li>(void)injected as an instance method, which gives you the chance to re-update an object with new contexts.</li>
-</ul>
-</li>
-<li><ul>
-<li>(void)injected as a class method, making it possible to update globals with new information</li>
-</ul>
-</li>
+<li>-(void)injected as an instance method, which gives you the chance to re-update an object with new contexts.</li>
+<li>+(void)injected as a class method, making it possible to update globals with new information</li>
 <li>Listening for INJECTION_BUNDLE_NOTIFICATION, allowing other classes to listen out for injection calls, this is useful for providing app level changes.</li>
 </ul>
 </blockquote>
@@ -63,9 +57,9 @@
 <p>更多功能大家可以在GitHub上去查看，我就不多啰嗦了~感谢观看</p>
 <hr>
 <p>发布时间: 2017-08-16 11:09:14</p>
-<p>原始链接: <a href="http://blog.lbinin.com/2017/08/11/Swift%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E5%BA%93SnapKit%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/" target="_blank" rel="external">Swift自动布局库SnapKit使用介绍</a></p>
+<p>原始链接: <a href="http://blog.lbinin.com/2017/08/16/UI%E8%B0%83%E8%AF%95%E7%A5%9E%E5%99%A8%20%E2%80%94%E2%80%94%20Injection%20for%20Xcode/" target="_blank" rel="external">UI调试神器 —— Injection for Xcode（Xcode插件）</a></p>
 <p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/08/16/UI调试神器 —— Injection for Xcode/" data-id="cj6ei5mk70007rf34q6g2wo7p" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/08/11/Swift自动布局库SnapKit使用介绍/" class="next">Swift自动布局库SnapKit使用介绍</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/08/16/UI调试神器 —— Injection for Xcode/" data-id="cj6ezrn2w0007zf34ozxeymlr" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/08/11/Swift自动布局库SnapKit使用介绍/" class="next">Swift自动布局库SnapKit使用介绍</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
   url: document.location.href,
   productKey: "b94647f00f4b4571b00b47f06d9ea163## Your gentie_productKey, e.g. fc799538c7ad4cf5a5a0c2877a90cbd7",
   target: "cloud-tie-wrapper"
