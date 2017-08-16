@@ -52,7 +52,7 @@
 <p>由于我使用的Swift，我在viewController中添加</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">injected</span><span class="params">()</span></span> &#123;</div><div class="line">	<span class="keyword">self</span>. viewDidLoad()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>结果报错</p>
-<p><img src="/2017/08/16/UI调试神器 —— Injection for Xcode/2.png" alt="报错"></p>
+<p><img src="/2017/08/16/UI调试神器 —— Injection for Xcode/3.png" alt="报错"></p>
 <p>非常无奈，结果仔细一看上面说明中的第三条，还可以添加Notification监听，果断尝试了一下，在 <strong>viewDidLoad</strong> 中添加如下代码：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="type">NotificationCenter</span>.<span class="keyword">default</span>.addObserver(<span class="keyword">self</span>, selector: #selector(refresh), name: <span class="type">NSNotification</span>.<span class="type">Name</span>(rawValue: <span class="string">"INJECTION_BUNDLE_NOTIFICATION"</span>), object: <span class="literal">nil</span>)</div></pre></td></tr></table></figure>
 <p>然后在class中添加：</p>
@@ -65,7 +65,7 @@
 <p>发布时间: 2017-08-16 11:09:14</p>
 <p>原始链接: <a href="http://blog.lbinin.com/2017/08/11/Swift%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E5%BA%93SnapKit%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/" target="_blank" rel="external">Swift自动布局库SnapKit使用介绍</a></p>
 <p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/08/16/UI调试神器 —— Injection for Xcode/" data-id="cj6ehv2lv0005ov34plfuvv8t" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/08/11/Swift自动布局库SnapKit使用介绍/" class="next">Swift自动布局库SnapKit使用介绍</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/08/16/UI调试神器 —— Injection for Xcode/" data-id="cj6ehzepw000bpk34vauedsok" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/08/11/Swift自动布局库SnapKit使用介绍/" class="next">Swift自动布局库SnapKit使用介绍</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
   url: document.location.href,
   productKey: "b94647f00f4b4571b00b47f06d9ea163## Your gentie_productKey, e.g. fc799538c7ad4cf5a5a0c2877a90cbd7",
   target: "cloud-tie-wrapper"
