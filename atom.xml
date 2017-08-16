@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-08-16T04:08:47.000Z</updated>
+  <updated>2017-08-16T04:09:47.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.lbinin.com/2017/08/16/UI%E8%B0%83%E8%AF%95%E7%A5%9E%E5%99%A8%20%E2%80%94%E2%80%94%20Injection%20for%20Xcode/"/>
     <id>http://www.lbinin.com/2017/08/16/UI调试神器 —— Injection for Xcode/</id>
     <published>2017-08-16T03:09:14.000Z</published>
-    <updated>2017-08-16T04:08:47.000Z</updated>
+    <updated>2017-08-16T04:09:47.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在写前端的时候，非常喜欢那种一写完就能立马看到自己代码效果的过程。在iOS开发过程中，编写界面代码时需要查看界面的布局或者颜色等是否符合要求，此时重新编译整个项目 -&gt; 安装到模拟器 -&gt; 启动项目 -&gt; 进入相关页面，界面开发过程中一大半的时间浪费在这无谓的等待上。一天躺在床上，思考着有这么多的神级前辈开发过iOS，他们在开发界面的时候也是这样等待吗，效率如此低下的工作会发生在他们身上吗？我觉的其中必要蹊跷，应该会有界面实施预览的工具，上网一搜，果然，其中推荐最多的还是 <strong>johnno1962</strong> 编写的 <strong>injectionforxcode</strong> Xcode插件。</p>
 <p>😆记录下我使用的第一款Xcode插件~</p>
@@ -82,7 +82,7 @@
 <p>然后在class中添加：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">refresh</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="keyword">self</span>.viewDidLoad()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>尝试一下</p>
-<p><img src="/2017/08/16/UI调试神器 —— Injection for Xcode/4.gif" alt="报错"></p>
+<p><img src="/2017/08/16/UI调试神器 —— Injection for Xcode/4.gif" alt="演示GIF"></p>
 <p>完美~</p>
 <p>更多功能大家可以在GitHub上去查看，我就不多啰嗦了~感谢观看</p>
 <hr>
