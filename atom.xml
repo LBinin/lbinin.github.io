@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-10-11T09:00:18.000Z</updated>
+  <updated>2017-11-01T16:15:38.000Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux(CentOS)下安装及配置Java环境</title>
+    <link href="http://www.lbinin.com/2017/11/01/Linux(CentOS)%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/"/>
+    <id>http://www.lbinin.com/2017/11/01/Linux(CentOS)下安装及配置Java环境/</id>
+    <published>2017-11-01T15:32:00.000Z</published>
+    <updated>2017-11-01T16:15:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="下载JDK8"><a href="#下载JDK8" class="headerlink" title="下载JDK8"></a>下载JDK8</h2><ol>
+<li><p>进入甲骨文官网下载： <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">Java SE Development Kit 8 - Downloads</a></p>
+</li>
+<li><p>选择对应的版本，这里我选择64位Linux版本的压缩包：<strong><code>jdk-8u151-linux-x64.tar.gz</code></strong></p>
+<p> 关于查看当前系统位数，可以使用命令： <code>file /bin/ls</code> 或者 <code>file /sbin/init</code> 查看当前系统的位数。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ usr]# file /bin/ls</div><div class="line">/bin/ls: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, BuildID[sha1]=0xec333a104e045327c5e3d0ca6dda16c610a210f3, stripped</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>命令行将会输出以上信息。如果显示 `64-bit` 则为64位，如果显示 `32-bit` 则为32位。
+</code></pre><ol>
+<li>下载JDK。由于甲骨文官网下载JDK采用基于cookie的防盗链，执着于在linux上下载JDK的同学可以参考 <a href="http://blog.csdn.net/bichir/article/details/42522113" target="_blank" rel="external">linux命令行下载jdk</a> 这篇文章，但是-=-由于笔者嫌麻烦直接在电脑上下载后通过FTP传到服务器上了</li>
+</ol>
+<hr>
+<h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><ol>
+<li><p>下载完毕后，解压缩JDK压缩包。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ java]# tar -zxvf jdk-8u151-linux-x64.tar.gz</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>解压缩完毕后，建立一个链接用来节省目录长度</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ jdk1.8.0_151]# ln -s /usr/java/jdk1.8.0_151/ /usr/jdk</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><ol>
+<li><p>编辑配置文件，配置环境变量</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ jdk1.8.0_151]# vim /etc/profile</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>在文本的末尾添加如下内容：
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">JAVA_HOME=/usr/jdk</div><div class="line">CLASSPATH=$JAVA_HOME/lib/</div><div class="line">PATH=$PATH:$JAVA_HOME/bin</div><div class="line">export PATH JAVA_HOME CLASSPATH</div></pre></td></tr></table></figure>
+</code></pre><ol>
+<li>执行 <code>source /etc/profile</code> 命令使配置生效</li>
+</ol>
+<hr>
+<h2 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h2><p>此时，你可以用熟悉的 <code>java -version</code> 查看当前安装的JDK的版本了哦~</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ usr]# java -version</div><div class="line">java version &quot;1.8.0_151&quot;</div><div class="line">Java(TM) SE Runtime Environment (build 1.8.0_151-b12)</div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)</div></pre></td></tr></table></figure>
+<p>如果你出现以上信息，那么恭喜你~至此Java环境配置完毕，快去大展身手吧！</p>
+<p>发布时间: 2017-11-01 23:32:00</p>
+<p>原始链接: <a href="http://blog.lbinin.com/2017/08/11/Swift%E8%87%AA%E5%8A%A8%E5%B8%83%E5%B1%80%E5%BA%93SnapKit%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/" target="_blank" rel="external">Swift自动布局库SnapKit使用介绍</a></p>
+<p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;下载JDK8&quot;&gt;&lt;a href=&quot;#下载JDK8&quot; class=&quot;headerlink&quot; title=&quot;下载JDK8&quot;&gt;&lt;/a&gt;下载JDK8&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;进入甲骨文官网下载： &lt;a href=&quot;http://www.oracle.com/tec
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Swift自动布局库SnapKit使用介绍</title>
