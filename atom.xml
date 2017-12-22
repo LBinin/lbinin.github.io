@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2017-12-22T10:09:50.782Z</updated>
+  <updated>2017-12-22T10:12:37.207Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://www.lbinin.com/2017/12/22/%E5%88%A9%E7%94%A8Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%AE%9E%E7%8E%B0%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/"/>
     <id>http://www.lbinin.com/2017/12/22/利用Nginx反向代理实现前端跨域/</id>
     <published>2017-12-22T07:05:25.000Z</published>
-    <updated>2017-12-22T10:09:50.782Z</updated>
+    <updated>2017-12-22T10:12:37.207Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在之前的一个课程项目中，遇到了一个跨域问题，不过以前用的都是 <code>jsonp</code> 或者后端设置 <code>Access-Control-Allow-Origin</code>，这两种方法都需要后端进行相对应的操作，如果遇到不想改文件的后端，或者短时间内联系不上后端呢？</p>
-<p><img src="/2017/12/22/利用Nginx反向代理实现前端跨域/0.jpg" alt=""></p>
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在之前的一个课程项目中，遇到了一个跨域问题，不过以前用的都是 <code>jsonp</code> 或者后端设置 <code>Access-Control-Allow-Origin</code>，这两种方法都需要后端进行相对应的操作，如果遇到不想改文件的后端，或者短时间内联系不上后端呢？<br><img src="/2017/12/22/利用Nginx反向代理实现前端跨域/0.jpg" alt=""></p>
 <p>但是这次遇到的是 <strong>HTTPS</strong> 跨域访问 <strong>HTTP</strong> 接口，给自己的子域名上了 SSL 后，发现 <strong>HTTP</strong> 的接口都无法使用了，后端也设置了 <strong>Access-Control-Allow-Origin</strong>，之前也都能用，jsonp也行不通。</p>
 <p>在查阅资料后发现，可以通过 Nginx 的反向代理解决该跨域问题，顺带一并也把其他的跨域给解决了 😆~</p>
 <hr>
