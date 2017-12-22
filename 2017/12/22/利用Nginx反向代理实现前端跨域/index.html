@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>利用Nginx反向代理实现前端跨域 | Lin's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">利用Nginx反向代理实现前端跨域</h1><a id="logo" href="/.">Lin's Blog</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="https://github.com/LBinin"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">利用Nginx反向代理实现前端跨域</h1><div class="post-meta">Dec 22, 2017<span> | </span><span class="category"><a href="/categories/前端/">前端</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><a href="/2017/12/22/利用Nginx反向代理实现前端跨域/#comments" class="ds-thread-count cloud-tie-join-count"><span style="font-size: 15px; color: #6E7173;" class="join-count">0</span><span> 条参与</span></a><div class="post-content"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在之前的一个课程项目中，遇到了一个跨域问题，不过以前用的都是 <code>jsonp</code> 或者后端设置 <code>Access-Control-Allow-Origin</code>，这两种方法都需要后端进行相对应的操作，如果遇到不想改文件的后端，或者短时间内联系不上后端呢？</p>
+<p>但是这次遇到的是 <strong>HTTPS</strong> 跨域访问 <strong>HTTP</strong> 接口，给自己的子域名上了 SSL 后，发现 <strong>HTTP</strong> 的接口都无法使用了，后端也设置了 <strong>Access-Control-Allow-Origin</strong>，之前也都能用，jsonp也行不通。</p>
+<p>在查阅资料后发现，可以通过 Nginx 的反向代理解决该跨域问题，顺带一并也把其他的跨域给解决了 😆~</p>
+<hr>
+<h3 id="常见的跨域解决方法"><a href="#常见的跨域解决方法" class="headerlink" title="常见的跨域解决方法"></a>常见的跨域解决方法</h3><ol>
+<li><p><strong>「jsonp」</strong>: 需要目标服务器配合一个 callback 函数。</p>
+<blockquote>
+<p>服务端需要接收 <code>callback</code> 参数，并且需要返回 <code>$_GET[&#39;callback&#39;] . &#39;(&#39; . json_encode($json) . &#39;)&#39;</code> ，即按 jsonp 的格式输出，否则会报语法错误。<a href="https://www.cnblogs.com/ada-zheng/p/4349840.html" target="_blank" rel="external">参考链接</a></p>
+</blockquote>
+</li>
+<li><p><strong>「CORS」</strong>: 需要服务器设置 header : <code>Access-Control-Allow-Origin</code> 。</p>
+</li>
+<li><p><strong>「window.name + iframe」</strong>: 需要目标服务器响应window.name。</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/zichi/p/4620656.html" target="_blank" rel="external">利用window.name+iframe跨域获取数据详解</a></p>
+</blockquote>
+</li>
+<li><p><strong>「window.location.hash(锚点) + iframe」</strong>: 同样需要目标服务器作处理。</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/zichi/p/4621963.html" target="_blank" rel="external">利用location.hash+iframe跨域获取数据详解</a></p>
+</blockquote>
+</li>
+<li><p><strong>「postMessage + ifrme」</strong>: 这个也是需要目标服务器或者说是目标页面写一个postMessage，主要侧重于前端通讯。</p>
+</li>
+</ol>
+<hr>
+<h3 id="思考-🤔"><a href="#思考-🤔" class="headerlink" title="思考 🤔"></a>思考 🤔</h3><h4 id="问-什么是跨域？"><a href="#问-什么是跨域？" class="headerlink" title="问: 什么是跨域？"></a>问: 什么是跨域？</h4><blockquote>
+<p>答: <strong>跨域</strong> 是指当一个资源从与该资源本身所在的服务器不同的域或端口不同的域或不同的端口请求一个资源时，资源会发起一个跨域 <strong>HTTP</strong> 请求。也就是说，正常的跨域情况，是你访问了一个A网站，然后这个网站返回的资源里面，请求了 B 网站 / 端口的资源，于是就跨域了。</p>
+</blockquote>
+<h4 id="问-是谁在禁止跨域？"><a href="#问-是谁在禁止跨域？" class="headerlink" title="问: 是谁在禁止跨域？"></a>问: 是谁在禁止跨域？</h4><blockquote>
+<p>答: 浏览器。之前有思考过为什么「Postman」没有跨域的问题，后来再知乎看到了答案:<strong>「</strong> 在 Postman 里面，实际上每发出一个请求，都是在独立请求一个资源，而不是在一个网站返回的页面里，再去请求另外一个网站 / 端口的资源。自然也就不会造成跨域了。 <strong>」</strong> 实际上就是因为跨域是浏览器做出的限制。</p>
+</blockquote>
+<h4 id="问-如何才能绕过这个规则？"><a href="#问-如何才能绕过这个规则？" class="headerlink" title="问: 如何才能绕过这个规则？"></a>问: 如何才能绕过这个规则？</h4><blockquote>
+<p>答: 不在浏览器中请求域外服务就好了嘛~</p>
+</blockquote>
+<hr>
+<h3 id="起初"><a href="#起初" class="headerlink" title="起初"></a>起初</h3><p>在 JavaScript 中，有如下代码，当前URL: <code>https://item.lbinin.com/test/</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">    <span class="attr">type</span>: <span class="string">'GET'</span>,</div><div class="line">    <span class="attr">url</span>: <span class="string">'https://api.lbinin.com/'</span>,</div><div class="line">    <span class="attr">dataType</span>: <span class="string">'json'</span>,</div><div class="line">    <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(data)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">error</span>: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">      <span class="built_in">console</span>.dir(data)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><img src="/2017/12/22/利用Nginx反向代理实现前端跨域/3.png" alt="跨域"></p>
+<p>果然，跨域出现问题 🙄</p>
+<p><img src="/2017/12/22/利用Nginx反向代理实现前端跨域/1.png" alt="跨域出现问题"></p>
+<p>怎么办呢! 往下看~</p>
+<hr>
+<h3 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h3><p>在 <strong>80</strong> 或者 <strong>443</strong> 端口的 <strong>server</strong> 块中填入一下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">location /apis &#123;</div><div class="line">	rewrite  ^/apis/(.*)$ /$1 break;</div><div class="line">	proxy_pass   http://你要请求的api地址.com/;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第一行: 添加对访问目录为 <code>/apis</code> 的代理配置，之后拦截所有对 <code>https://当前域名.com/apis</code> 的请求，进行花括号内的操作。</p>
+<p>第二行: 重写拦截的请求，并且只能对域名后，传参前的字符串起作用。即 <code>www.你的域名.com/html/apis/api?method=1&amp;para=123</code> 重写。只对 <code>/html/apis/api</code> 重写。<code>rewrite</code> 后面的参数是一个简单的正则 <code>^/apis/(.*)$</code>， <code>$1</code> 代表正则中的第一个 <code>()</code> ，以此类推。<code>break</code> 代表匹配一个之后停止匹配。</p>
+<p>第三行: 把请求代理到<strong>其他主机</strong>。</p>
+<p>修改完后保存，重启 Nginx ~</p>
+<hr>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>将 URL 改为 <code>/apis</code> 就好啦~</p>
+<p><img src="/2017/12/22/利用Nginx反向代理实现前端跨域/2.png" alt="将URL改为/apis"></p>
+<p>ok，跨域成功 🎉</p>
+<p><img src="/2017/12/22/利用Nginx反向代理实现前端跨域/4.png" alt="跨域成功"></p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>总的来说，思路就是：</p>
+<p>你在本域访问自己的服务，相当于转发，然后 Nginx 拦截你的请求，代理到目标地址，Nginx 本身没有禁止跨域的限制，是浏览器禁止的跨域，所以 Nginx 能够获取到跨域内容，并将获取到的内容返回给当前服务，完成跨域。个人感觉，这才是跨域的正确姿势!</p>
+<p><img src="/2017/12/22/利用Nginx反向代理实现前端跨域/5.jpg" alt="嘻嘻嘻"></p>
+<hr>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><blockquote>
+<p><a href="https://www.zhihu.com/question/62678567/answer/204352928" target="_blank" rel="external">为什么使用postman发送请求时不会有跨域问题？ - 知乎</a></p>
+<p><a href="https://www.cnblogs.com/gabrielchen/p/5066120.html" target="_blank" rel="external">用nginx的反向代理机制解决前端跨域问题</a></p>
+</blockquote>
+<p>发布时间: 2017-12-22 15:05:25</p>
+<p>原始链接: <a href="http://blog.lbinin.com/2017/12/22/利用Nginx反向代理实现前端跨域/" target="_blank" rel="external">利用Nginx反向代理实现前端跨域</a></p>
+<p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/12/22/利用Nginx反向代理实现前端跨域/" data-id="cjbhr0276000ulzv99yamkkp1" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/11/10/iPhone获取手机UDID(用以参与应用分发测试)/" class="next">iPhone获取手机UDID(用以参与拱拱应用分发测试)</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
+  url: document.location.href,
+  productKey: "b94647f00f4b4571b00b47f06d9ea163## Your gentie_productKey, e.g. fc799538c7ad4cf5a5a0c2877a90cbd7",
+  target: "cloud-tie-wrapper"
+};</script><script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Swift/">Swift</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Xcode/">Xcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/人工智能基础/">人工智能基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/服务器/">服务器</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂记/">杂记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/12/22/利用Nginx反向代理实现前端跨域/">利用Nginx反向代理实现前端跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/10/iPhone获取手机UDID(用以参与应用分发测试)/">iPhone获取手机UDID(用以参与拱拱应用分发测试)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/11/Swift自动布局库SnapKit使用介绍/">Swift自动布局库SnapKit使用介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/UI调试神器 —— Injection for Xcode/">UI调试神器 —— Injection for Xcode（Xcode插件）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/Mac百度网盘（网页版）破解突破下载速度限制/">Mac百度网盘（网页版）破解突破下载速度限制</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/02/Mac下安装CocoaPods安装和使用教程/">Mac下CocoaPods安装和使用教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/07/遗传算法解决函数最大值问题/">遗传算法解决函数最大值问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/03/关于will-change的用法以及一些web动画渲染优化/">关于will-change的用法以及一些web动画渲染优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/03/利用纯css完成感知悬停/">利用纯css完成感知悬停</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/02/论不同动画衔接之间的小技巧/">论不同动画衔接之间的小技巧</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://slight-sky.github.io/" title="Slight" target="_blank">Slight</a><ul></ul><a href="http://hutchins.cn/" title="Hutchins" target="_blank">Hutchins</a><ul></ul><a href="http://blog.yfree.cc/" title="YFree" target="_blank">YFree</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 <a href="/." rel="nofollow">Lin's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?51a6a3aba934f64324a6790b0f247d41## Your Baidu Analytics tracking id, e.g. 8006843039519956000";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
