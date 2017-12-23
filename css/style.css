@@ -227,7 +227,6 @@ div {
     .post .post-content h2 {
       margin: 1.4em 0 1.1em;
       border-bottom: 1px solid #eee;
-      overflow: hidden;
       position: relative; }
     .post .post-content h2:before, .post .post-content h3:before {
       content: "#";
