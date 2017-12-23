@@ -161,7 +161,8 @@ div {
   color: #888; }
 
 .post {
-  padding: 25px 0 15px; }
+  padding: 35px 0 40px;
+  border-bottom: 1px solid #ddd; }
   .post .post-title {
     margin: 0;
     color: #555;
@@ -226,9 +227,16 @@ div {
     .post .post-content h2 {
       margin: 1.4em 0 1.1em;
       border-bottom: 1px solid #eee;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
+    .post .post-content h2:before, .post .post-content h3:before {
+      content: "#";
+      position: absolute;
+      left: -15px;
+      font-weight: bold; }
     .post .post-content h3 {
-      margin: 1.4em 0 1.1em; }
+      margin: 1.4em 0 1.1em;
+      position: relative; }
     .post .post-content pre code {
       padding: 0 2em; }
     .post .post-content p {
@@ -258,7 +266,7 @@ div {
       position: relative; }
     .post .post-content img {
       max-width: 100%;
-      padding: 0.5em 0;
+      padding: 1.5em 0 0.5em;
       margin: auto;
       display: block; }
     .post .post-content ul, .post .post-content ol {
