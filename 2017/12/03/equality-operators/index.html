@@ -5,6 +5,7 @@
 <li><p>为什么 <code>[1] == 1</code> 为 <code>true</code> ?</p>
 </li>
 </ol>
+<hr>
 <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p>如果我们要解决上面的疑问，就需要先搞懂 <code>==</code> 和 <code>===</code> 的规则和关系</p>
 <p><strong><code>===</code> 判断规则：</strong></p>
 <p>如果 <strong>类型</strong> 不同，就 <code>不相等</code> </p>
@@ -14,7 +15,6 @@
 <p>如果两个值都是 <code>对象</code> ，且都引用自 <strong>同一个</strong> 对象或函数，那么 <code>相等</code> ，否则 <code>不相等</code> 。 </p>
 <p>如果两个值都是 <code>null</code> ，或者都是 <code>undefined</code> ，那么 <code>相等</code> 。 </p>
 <p>如果其中至少有一个是 <code>NaN</code> ，那么 <code>不相等</code> 。</p>
-<hr>
 <p><strong><code>==</code> 判断规则：</strong></p>
 <p>如果两个值 <code>类型</code> 相同，进行 <code>===</code> 比较。 </p>
 <p>如果两个值 <code>类型</code> 不同，他们可能相等。根据下面规则进行类型转换再比较： </p>
@@ -23,6 +23,7 @@
 <p>如果任一值是 <code>true</code> ，把它转换成 <strong>1</strong> 再比较；如果任一值是 <code>false</code> ，把它转换成 <strong>0</strong> 再比较。 </p>
 <p>如果一个是 <code>对象</code> ，另一个是 <code>数值或字符串</code> ，把 <strong>对象转换成基础类型</strong> 的值再比较。对象转换成基础类型在第 <strong>2</strong> 点有提到。</p>
 <p>任何其他组合，都 <code>不相等</code> 。</p>
+<hr>
 <h3 id="总结规则"><a href="#总结规则" class="headerlink" title="总结规则"></a>总结规则</h3><p>总的来说就是：</p>
 <p><strong>对于 <code>===</code> 来说有如下对比规则</strong></p>
 <ol>
@@ -40,7 +41,6 @@
 <p> <code>undefined</code> 和 <code>null</code> 与<strong>自身</strong>严格相等，但是<strong>两者</strong>不严格相等。</p>
 </li>
 </ol>
-<hr>
 <p><strong>对于 <code>==</code> 来说有如下对比规则</strong></p>
 <ol>
 <li><p>原始类型的值</p>
@@ -69,6 +69,7 @@
 <p>这是因为 <code>[1]</code> 在和 <code>1</code> 进行比较的时候，首先会被转成数字类型，而转成数字类型在实现上又是通过 <strong>new Number()</strong> 来完成的。</p>
 <p>所以，<code>[1] == 1</code> 会变成 <code>Number([1]) == 1</code> 。</p>
 <p>同时，<code>Number</code> 方法接受一个 <strong>字符串</strong> 作为参数的，也就是 <code>[1].toString()</code> === <code>&#39;1&#39;</code>，所以 <code>Number([1])</code> 相当于写 <code>Number(&#39;1&#39;)</code>，于是很显然 <code>Number([1])</code> 就是 1 了。</p>
+<hr>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>个人总结：对于相等运算符 <code>==</code> 如果一边是对象，一边是基本类型，JavaScript 会先将对象使用抽象操作 <code>ToPrimitive</code> 将对象转换成基本类型 ( Primitive ) 之后再进行比较，之后就是基本类型之间的比较了。</p>
 <p>一个对象转化为基本类型的步骤如下：</p>
 <blockquote>
@@ -84,7 +85,7 @@
 <p>发布时间: 2017-12-03 22:25:48</p>
 <p>原始链接: <a href="http://blog.lbinin.com/2017/12/03/equality-operators/" target="_blank" rel="external">JavaScript 中「相等运算符」和「严格相等运算符」的规则和关系</a></p>
 <p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/12/03/equality-operators/" data-id="cjbz6a0ho0009ydv9lr1sdl5m" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/12/22/利用Nginx反向代理实现前端跨域/" class="pre">利用Nginx反向代理实现前端跨域</a><a href="/2017/11/10/iPhone-get-UDID/" class="next">iPhone获取手机UDID(用以参与拱拱应用分发测试)</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.lbinin.com/2017/12/03/equality-operators/" data-id="cjbz6dchs000bznv9462gdprg" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/2017/12/22/利用Nginx反向代理实现前端跨域/" class="pre">利用Nginx反向代理实现前端跨域</a><a href="/2017/11/10/iPhone-get-UDID/" class="next">iPhone获取手机UDID(用以参与拱拱应用分发测试)</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script>var cloudTieConfig = {
   url: document.location.href,
   productKey: "b94647f00f4b4571b00b47f06d9ea163## Your gentie_productKey, e.g. fc799538c7ad4cf5a5a0c2877a90cbd7",
   target: "cloud-tie-wrapper"
