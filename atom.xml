@@ -106,7 +106,7 @@
     <link href="http://www.lbinin.com/2017/12/03/equality-operators/"/>
     <id>http://www.lbinin.com/2017/12/03/equality-operators/</id>
     <published>2017-12-03T14:25:48.000Z</published>
-    <updated>2018-01-03T14:45:34.161Z</updated>
+    <updated>2018-01-04T05:05:04.543Z</updated>
     
     <content type="html"><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>首先我们抛出两个问题：</p>
 <ol>
@@ -115,6 +115,7 @@
 <li><p>为什么 <code>[1] == 1</code> 为 <code>true</code> ?</p>
 </li>
 </ol>
+<a id="more"></a>
 <hr>
 <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><p>如果我们要解决上面的疑问，就需要先搞懂 <code>==</code> 和 <code>===</code> 的规则和关系</p>
 <p><strong><code>===</code> 判断规则：</strong></p>
@@ -201,7 +202,11 @@
     
       &lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h3&gt;&lt;p&gt;首先我们抛出两个问题：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;为什么 &lt;code&gt;[1] == [1]&lt;/code&gt; 为 &lt;code&gt;false&lt;
+&lt;li&gt;&lt;p&gt;为什么 &lt;code&gt;[1] == [1]&lt;/code&gt; 为 &lt;code&gt;false&lt;/code&gt; ? &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;为什么 &lt;code&gt;[1] == 1&lt;/code&gt; 为 &lt;code&gt;true&lt;/code&gt; ?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
