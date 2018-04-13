@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2018-03-04T15:41:44.586Z</updated>
+  <updated>2018-04-13T14:02:08.257Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -16,28 +16,88 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mac 下 tree 命令使用</title>
+    <link href="http://www.lbinin.com/2018/04/13/mac-tree/"/>
+    <id>http://www.lbinin.com/2018/04/13/mac-tree/</id>
+    <published>2018-04-13T13:53:51.000Z</published>
+    <updated>2018-04-13T14:02:08.257Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>在写某篇笔记的时候需要列出目录下文件结构，但是 Mac 下默认是没有 <code>tree</code> 命令的，这时候我们可以通过 <strong>Homebrew</strong> 安装 <code>tree</code> 这款软件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install tree</div></pre></td></tr></table></figure>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>tree 命令行参数：</p>
+<ul>
+<li><code>-a</code> 显示所有文件和目录。</li>
+<li><code>-A</code> 使用 ASNI 绘图字符显示树状图而非以 ASCII 字符组合。</li>
+<li><code>-C</code> 在文件和目录清单加上色彩，便于区分各种类型。</li>
+<li><code>-d</code> 显示目录名称而非内容。</li>
+<li><code>-D</code> 列出文件或目录的更改时间。</li>
+<li><code>-f</code> 在每个文件或目录之前，显示完整的相对路径名称。</li>
+<li><code>-F</code> 在执行文件，目录，Socket，符号连接，管道名称名称，各自加上 <code>*</code>、<code>/</code>、<code>=</code>、<code>@</code>、<code>|</code>号。</li>
+<li><code>-g</code> 列出文件或目录的所属群组名称，没有对应的名称时，则显示群组识别码。</li>
+<li><code>-i</code> 不以阶梯状列出文件或目录名称。</li>
+<li><code>-I</code> 不显示符合范本样式的文件或目录名称。</li>
+<li><code>-l</code> 如遇到性质为符号连接的目录，直接列出该连接所指向的原始目录。</li>
+<li><code>-n</code> 不在文件和目录清单加上色彩。</li>
+<li><code>-N</code> 直接列出文件和目录名称，包括控制字符。</li>
+<li><code>-p</code> 列出权限标示。</li>
+<li><code>-P</code> 只显示符合范本样式的文件或目录名称。</li>
+<li><code>-q</code> 用 <code>?</code> 号取代控制字符，列出文件和目录名称。</li>
+<li><code>-s</code> 列出文件或目录大小。</li>
+<li><code>-t</code> 用文件和目录的更改时间排序。</li>
+<li><code>-u</code> 列出文件或目录的拥有者名称，没有对应的名称时，则显示用户识别码。</li>
+<li><code>-x</code> 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。</li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>如果入到中文乱码，可以试试 <code>tree -N</code> 命令。</p>
+<hr>
+<p>发布时间: 2018-04-13 21:53:51</p>
+<p>原始链接: <a href="http://blog.lbinin.com/2018/04/13/mac-tree/" target="_blank" rel="external">Mac 下 tree 命令使用</a></p>
+<p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h2&gt;&lt;p&gt;在写某篇笔记的时候需要列出目录下文件结构，但是 Mac 下默认是没有 &lt;code&gt;tree&lt;/code&gt; 命令的，这时候我们可以通过 &lt;st
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.lbinin.com/categories/Mac/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript 中有关的专有名词记录</title>
     <link href="http://www.lbinin.com/2018/03/04/proper-noun/"/>
     <id>http://www.lbinin.com/2018/03/04/proper-noun/</id>
     <published>2018-03-04T15:14:19.000Z</published>
-    <updated>2018-03-04T15:41:44.586Z</updated>
+    <updated>2018-04-13T14:11:25.545Z</updated>
     
     <content type="html"><![CDATA[<p>🧐 <strong>Keep learning</strong></p>
 <p>如果有错误欢迎指出，互相学习~</p>
-<p><strong>dispatch</strong>：分发</p>
-<p><strong>SPA</strong>：全称 <strong>Single-Page Application</strong>，单页面应用</p>
+<p><strong>dispatch</strong>：分发。</p>
+<p><strong>Anchor</strong>：锚点。</p>
+<p><strong>Truthy</strong>：在 JavaScript 中，<code>Truthy</code> 指的是在 Boolean 上下文中转换后的值为 <code>true</code> 的值。</p>
+<p><strong>Falsy</strong>：在 Boolean 上下文中认定可转换为 <code>false</code> 的值。</p>
+<p><strong>SPA</strong>：全称 <strong>Single-Page Application</strong>，单页面应用。</p>
 <p><strong>PWA</strong>：全称 <strong>Progressive Web Apps</strong>，渐进式 Web 应用程序。全新的网页技术，让网站的离线体验变得更好，网络连接断断续续时体验也会更好，它会模拟一些原生功能，比如通知推送。在移动端利用标准化框架，让网页应用呈现和原生应用相似的体验。</p>
 <p><strong>SSR</strong>：全称 <strong>Server Side Render</strong>，服务端渲染。将组件在服务器端渲染为 HTML 字符串，将它们直接发送到客户端（ 浏览器 ），这个过程就叫做服务端渲染。</p>
 <p><strong>shim</strong>：技术术语，将一个新的 API 引入到一个旧的环境中，而且仅靠旧环境中已有的手段实现。比如 <strong>jQuery</strong> 的 <code>$.ajax</code> 这个新的 API 封装了 <code>XMLHttpRequest</code> 和 IE 用 <code>ActiveXObject</code> 方式创建 <code>xhr</code> 对象。往往 shim 的 API 是「不遵循标准」的，而是自己设计的。</p>
 <p><strong>polyfill</strong>：特指 <strong>shim</strong> 成的 API 是「遵循标准」的，其典型做法是在 IE 浏览器中增加 <code>window.XMLHttpRequest</code>，内部实现使用 <code>ActiveXObject</code>。</p>
+<p><strong>SSOT</strong>：全称 <strong>Single source of truth</strong>，唯一数据源。</p>
+<p><strong>CORS</strong>：全称 <strong>Cross-origin resource sharing</strong>，跨域资源共享。它允许浏览器向跨源服务器，发出 <strong>XMLHttpRequest</strong> 请求，从而克服了 AJAX 只能同源使用的限制。详情 👉🏻 ：<a href="https://github.com/LBinin/LearnJS/blob/master/FE/CORS%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB.md" target="_blank" rel="external">CORS跨域资源共享</a></p>
+<p><strong>ECMA</strong>：全称 <strong>European Computer Manufacturers Association</strong>，欧洲计算机制造商协会。是一个开发计算机硬件、通信和程序语言标准的非盈利组织。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary" target="_blank" rel="external">术语表 | MDN</a></li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;🧐 &lt;strong&gt;Keep learning&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果有错误欢迎指出，互相学习~&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;dispatch&lt;/strong&gt;：分发&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SPA&lt;/strong&gt;：全称 &lt;strong&gt;Singl
+&lt;p&gt;&lt;strong&gt;dispatch&lt;/strong&gt;：分发。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Anchor&lt;/strong&gt;：锚点。&lt;/p&gt;
+&lt;p&gt;&lt;
     
     </summary>
     
@@ -1351,93 +1411,6 @@
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# sudo yum install wget&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;下载完用 &lt;code&gt;ll&lt;/code&gt; 命令查看刚刚下载获得的 &lt;code&gt;nginx-*.tar.gz&lt;/code&gt; 文件，用下面命令解压它&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# tar -zxvf nginx-1.12.0.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>配置服务器 —— 安装Mysql</title>
-    <link href="http://www.lbinin.com/2017/04/15/server-mysql/"/>
-    <id>http://www.lbinin.com/2017/04/15/server-mysql/</id>
-    <published>2017-04-15T02:20:00.000Z</published>
-    <updated>2017-05-02T07:16:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Mysql安装："><a href="#Mysql安装：" class="headerlink" title="Mysql安装："></a>Mysql安装：</h2><p><strong><em>下载解压安装</em></strong></p>
-<hr>
-<h2 id="2017-4-16更新"><a href="#2017-4-16更新" class="headerlink" title="2017.4.16更新"></a><em>2017.4.16更新</em></h2><p>说说遇到的坑吧，首先对mysql的make命令，真的是编译一天！编译了一天就不说了，最后还有奇奇怪怪的问题！结果还没有安装成功！</p>
-<p>现在我决定换一个安装方式！</p>
-<p>说一下我的操作系统是 <code>CentOS7</code>，查资料发现是CentOS7版本将MySQL数据库软件从默认的程序列表中移除，用mariadb代替了，这样，我们回归寻常路</p>
-<p>CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载</p>
-<a id="more"></a>
-<p>安装 <code>mysql-community-server</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</div><div class="line">[root@iZ2844brz0xZ ~]# rpm -ivh mysql-community-release-el7-5.noarch.rpm</div><div class="line">[root@iZ2844brz0xZ ~]# yum install mysql-community-server</div></pre></td></tr></table></figure>
-<p>成功安装之后启动<code>mysql</code> 服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# service mysqld start</div></pre></td></tr></table></figure>
-<p>初次安装mysql的时候，root账户是没有密码的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# mysql -u root -p</div><div class="line">Enter password:</div></pre></td></tr></table></figure>
-<p>要求输入密码的时候直接回车，因为没有密码，进入到mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SET PASSWORD FOR &apos;root&apos;@&apos;localhost&apos; = PASSWORD(&apos;newPassword&apos;);</div></pre></td></tr></table></figure>
-<p>其中 <code>newPassword</code> 为你为 <code>root</code> 账户设置的密码。</p>
-<p>若提示下面信息则表示设置成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Query OK, 0 rows affected (0.02 sec)</div></pre></td></tr></table></figure>
-<p>退出，搞定~</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; exit</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="手动编译版本："><a href="#手动编译版本：" class="headerlink" title="手动编译版本："></a>手动编译版本：</h2><p><a href="https://dev.mysql.com/downloads/mysql/，进入后在下方选择" target="_blank" rel="external">https://dev.mysql.com/downloads/mysql/，进入后在下方选择</a> <strong><code>source code</code></strong> 版本，选择 <code>Generic Linux (Architecture Independent), Compressed TAR Archive</code>，右键复制链接，用下面命令下载后得到 <code>.tar.gz</code> 的包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.18.tar.gz</div></pre></td></tr></table></figure>
-<p>如果提示wget命令为找到，则执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# sudo yum install wget</div></pre></td></tr></table></figure>
-<p>下载完用 <code>ll</code> 命令查看刚刚下载获得的 <code>mysql-**.**.**.tar.gz</code> 文件，用下面命令解压并解包它</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# tar -zxvf mysql-5.7.18.tar.gz</div></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>-z</strong>: 表示使用gzip的属性。<br><strong>-x</strong>: 解开一个压缩文件的参数指令。<br><strong>-v</strong>: 表示压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！<br><strong>-f</strong>: 使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！</p>
-<p><a href="http://jingyan.baidu.com/article/86112f13605d30273697876e.html?st=2&amp;os=0&amp;bd_page_type=1&amp;net_type=1" target="_blank" rel="external">参考资料</a></p>
-</blockquote>
-<p>接下来我们用yum来安装我们需要的依赖和工具。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# sudo yum install cmake gcc-c++ ncurses-devel perl-Data-Dumper boost boost-doc boost-devel</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="Mysql安装：-1"><a href="#Mysql安装：-1" class="headerlink" title="Mysql安装："></a>Mysql安装：</h2><p><strong><em>编译安装</em></strong></p>
-<p>进入mysql目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# cd mysql-5.7.18/</div></pre></td></tr></table></figure>
-<p>用cmake命令编译，代码如下，后面的均为配置数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]# cmake -DCMAKE_INSTALL_PREFIX=/home/mysql -DMYSQL_DATADIR=/home/mysql/data -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DMYSQL_TCP_PORT=3306 -DMYSQL_USER=mysql -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_BLACKHOLE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/usr/local/boost</div></pre></td></tr></table></figure>
-<p>cmake命令结束后，使用make命令进行编译（过程有点慢）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# make</div></pre></td></tr></table></figure>
-<p>make编译完成后，用下面命令安装Mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# sudo make install</div></pre></td></tr></table></figure>
-<p>安装结束后，使用 <code>mysqld</code> 命令启动Mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# mysqld</div></pre></td></tr></table></figure>
-<p>启动后，使用mysql命令进入Mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ mysql-5.7.18]# mysql</div></pre></td></tr></table></figure>
-<p>若显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt;</div></pre></td></tr></table></figure></p>
-<p>表明进入mysql，安装成功。</p>
-<hr>
-<h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>在这里特别提醒， 对于mysql5.7.8的make编译， 如果是阿里云centos主机512M内存的， 会在make编译到45%左右的时候会报错， 这是内存不足所致。</p>
-<p>那么设置2G交换分区来用下 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ /]# dd if=/dev/zero of=/swapfile bs=1k count=2048000 --获取要增加的2G的SWAP文件块（执行命令后需要等待一段时间）</div><div class="line">[root@iZ2844brz0xZ /]# mkswap /swapfile     -- 创建SWAP文件</div><div class="line">[root@iZ2844brz0xZ /]# swapon /swapfile     -- 激活SWAP文件</div><div class="line">[root@iZ2844brz0xZ /]# swapon -s            -- 查看SWAP信息是否正确</div><div class="line">[root@iZ2844brz0xZ /]# echo &quot;/var/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab     -- 添加到fstab文件中让系统引导时自动启动</div></pre></td></tr></table></figure></p>
-<p>注意, swapfile文件的路径在 <code>/var/</code> 下 </p>
-<p>编译完后, 如果不想要交换分区了, 可以删除:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ /]# swapoff /swapfile</div><div class="line">[root@iZ2844brz0xZ /]# rm -fr /swapfile</div></pre></td></tr></table></figure>
-<p>实际操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ /]# dd if=/dev/zero of=/swapfile bs=1k count=2048000</div><div class="line">2048000+0 records in</div><div class="line">2048000+0 records out</div><div class="line">2097152000 bytes (2.1 GB) copied, 42.2248 s, 49.7 MB/s</div><div class="line">[root@iZ2844brz0xZ /]# mkswap /swapfile</div><div class="line">Setting up swapspace version 1, size = 2047996 KiB</div><div class="line">no label, UUID=5f8de87f-9057-4bf7-af9d-a09e1be7de56</div><div class="line">[root@iZ2844brz0xZ /]# swapon /swapfile</div><div class="line">swapon: /swapfile: insecure permissions 0644, 0600 suggested.</div><div class="line">[root@iZ2844brz0xZ /]# swapon -s</div><div class="line">Filename				Type		Size	Used	Priority</div><div class="line">/swapfile                              	file	2047996	0	-1</div><div class="line">[root@iZ2844brz0xZ /]# echo &quot;/var/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab</div><div class="line">[root@iZ2844brz0xZ /]#</div></pre></td></tr></table></figure>
-<blockquote>
-<p><a href="http://blog.csdn.net/cryhelyxx/article/details/47610247" target="_blank" rel="external">参考资料</a> <em>作者：zhuxiongxian</em></p>
-</blockquote>
-<hr>
-<p>至此，Mysql安装结束</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Mysql安装：&quot;&gt;&lt;a href=&quot;#Mysql安装：&quot; class=&quot;headerlink&quot; title=&quot;Mysql安装：&quot;&gt;&lt;/a&gt;Mysql安装：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;下载解压安装&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;2017-4-16更新&quot;&gt;&lt;a href=&quot;#2017-4-16更新&quot; class=&quot;headerlink&quot; title=&quot;2017.4.16更新&quot;&gt;&lt;/a&gt;&lt;em&gt;2017.4.16更新&lt;/em&gt;&lt;/h2&gt;&lt;p&gt;说说遇到的坑吧，首先对mysql的make命令，真的是编译一天！编译了一天就不说了，最后还有奇奇怪怪的问题！结果还没有安装成功！&lt;/p&gt;
-&lt;p&gt;现在我决定换一个安装方式！&lt;/p&gt;
-&lt;p&gt;说一下我的操作系统是 &lt;code&gt;CentOS7&lt;/code&gt;，查资料发现是CentOS7版本将MySQL数据库软件从默认的程序列表中移除，用mariadb代替了，这样，我们回归寻常路&lt;/p&gt;
-&lt;p&gt;CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载&lt;/p&gt;
     
     </summary>
     
