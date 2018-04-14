@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2018-04-13T14:02:08.257Z</updated>
+  <updated>2018-04-14T17:17:40.713Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fira Code —— 程序员专用字体</title>
+    <link href="http://www.lbinin.com/2018/04/15/firacode/"/>
+    <id>http://www.lbinin.com/2018/04/15/firacode/</id>
+    <published>2018-04-14T17:01:15.000Z</published>
+    <updated>2018-04-14T17:17:40.713Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Fira Code 是 Mozilla 主推的专为代码排版优化的等宽字体。</p>
+<p>它基于 Fira Mono 等宽字体的一个扩展，主要特点是加入了编程连字特性（ligatures）。</p>
+<p>一张图看懂区别：</p>
+<p><img src="/2018/04/15/firacode/all_ligatures.png" alt="一张图看懂区别"></p>
+<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><ol>
+<li>可以到 Fira Code 的 GitHub 上下载 👉🏻 ：<a href="https://github.com/tonsky/FiraCode" target="_blank" rel="external">GitHub</a></li>
+<li>我备份了一份，提供下载，直接点击下载 👉🏻 ：<a href="http://software.lbinin.com/FiraCode_1.205.zip" target="_blank" rel="external">software · LBinin</a></li>
+</ol>
+<p>至于字体的安装，直接打开 <code>.ttf</code> 文件安装即可，这里不再赘述</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>这里以 VSCode 为例，打开「首选项」-&gt;「设置」（ <code>⌘ + ,</code> ），添加如下内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",</div><div class="line">"editor.fontLigatures": true</div></pre></td></tr></table></figure>
+<p>大功告成 🎉</p>
+<hr>
+<p>发布时间: 2018-04-15 01:01:15</p>
+<p>原始链接: <a href="http://blog.lbinin.com/2018/04/13/firecode/" target="_blank" rel="external">Mac 下 tree 命令使用</a></p>
+<p>许可协议: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Fira Code 是 Mozilla 主推的专为代码排版优化的等宽字体。&lt;/p&gt;
+&lt;p&gt;它基于 Fira Mono 等宽字体的一个扩展，主
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.lbinin.com/categories/Mac/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Mac 下 tree 命令使用</title>
@@ -1277,140 +1314,6 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ vsftpd]# useradd linbin&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;添加完用户后，给该用户添加密码。&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ vsftpd]# passwd linbin&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>配置服务器 —— Nginx的安装和配置</title>
-    <link href="http://www.lbinin.com/2017/04/15/server-nginx/"/>
-    <id>http://www.lbinin.com/2017/04/15/server-nginx/</id>
-    <published>2017-04-15T08:18:00.000Z</published>
-    <updated>2017-05-02T07:17:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Nginx安装："><a href="#Nginx安装：" class="headerlink" title="Nginx安装："></a>Nginx安装：</h2><p><strong><em>下载解压安装</em></strong></p>
-<hr>
-<p>进入Nginx官网站 <a href="http://nginx.org/" target="_blank" rel="external">http://nginx.org/</a>，进入后选择最新的版本，进入页面后在 <code>Stable version</code> 中选择 <code>nginx-*</code> 右键复制链接，然后用 <code>wget</code> 下载</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget http://nginx.org/download/nginx-1.12.0.tar.gz</span></div></pre></td></tr></table></figure>
-<p>如果提示wget命令未找到，则执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># sudo yum install wget</span></div></pre></td></tr></table></figure>
-<p>下载完用 <code>ll</code> 命令查看刚刚下载获得的 <code>nginx-*.tar.gz</code> 文件，用下面命令解压它</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf nginx-1.12.0.tar.gz</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<blockquote>
-<p><strong>-z</strong>: 表示使用gzip的属性。<br><strong>-x</strong>: 解开一个压缩文件的参数指令。<br><strong>-v</strong>: 表示压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！<br><strong>-f</strong>: 使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！</p>
-<p><a href="http://jingyan.baidu.com/article/86112f13605d30273697876e.html?st=2&amp;os=0&amp;bd_page_type=1&amp;net_type=1" target="_blank" rel="external">参考资料</a></p>
-</blockquote>
-<hr>
-<p>安装Nginx前，需要安装以下三个依赖包：</p>
-<ol>
-<li><p>gzip 模块需要 <code>zlib</code> 库</p>
-</li>
-<li><p>rewrite 模块需要 <code>pcre</code> 库</p>
-</li>
-<li><p>ssl 功能需要 <code>openssl</code> 库</p>
-</li>
-</ol>
-<p><a href="https://www.openssl.org/source/" target="_blank" rel="external">https://www.openssl.org/source/</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget https://www.openssl.org/source/openssl-fips-2.0.14.tar.gz</span></div></pre></td></tr></table></figure>
-<p><a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget http://www.zlib.net/zlib-1.2.11.tar.gz</span></div></pre></td></tr></table></figure>
-<p>(<a href="http://www.pcre.org/)[http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/)[http://www.pcre.org/</a>]</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz</span></div></pre></td></tr></table></figure>
-<p>下载完成后安装，依赖包安装顺序依次为: <code>openssl</code>、<code>zlib</code>、<code>pcre</code>, 然后安装 <code>Nginx</code> 包</p>
-<hr>
-<p>1.安装openssl</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf openssl-fips-2.0.14.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd openssl-fips-2.0.14/</span></div><div class="line">[root@iZ2844brz0xZ openssl-fips-2.0.14]<span class="comment"># ./config </span></div><div class="line">[root@iZ2844brz0xZ openssl-fips-2.0.14]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ openssl-fips-2.0.14]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
-<p>2.安装zlib</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf zlib-1.2.11.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd zlib-1.2.11/</span></div><div class="line">[root@iZ2844brz0xZ zlib-1.2.11]<span class="comment"># ./configure </span></div><div class="line">[root@iZ2844brz0xZ zlib-1.2.11]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ zlib-1.2.11]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
-<p>3.安装pcre</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf pcre-8.39.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd pcre-8.39/</span></div><div class="line">[root@iZ2844brz0xZ pcre-8.39]<span class="comment"># ./configure </span></div><div class="line">[root@iZ2844brz0xZ pcre-8.39]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ pcre-8.39]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
-<p>4.安装nginx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zxvf nginx-1.12.0.tar.gz </span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd nginx-1.12.0/</span></div><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># ./configure --with-pcre=../pcre-8.39 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-fips-2.0.14</span></div><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># make</span></div><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># make install</span></div></pre></td></tr></table></figure>
-<hr>
-<p>检测是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ nginx-1.12.0]<span class="comment"># cd /usr/local/nginx/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./nginx -t</span></div></pre></td></tr></table></figure>
-<p>若出现下方信息表示安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">nginx: the configuration file /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf syntax is ok</div><div class="line">nginx: configuration file /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf <span class="built_in">test</span> is successful</div></pre></td></tr></table></figure>
-<p>最后一步：启动Nginx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./nginx</span></div></pre></td></tr></table></figure>
-<p>查看端口</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># netstat -ntlp</span></div></pre></td></tr></table></figure>
-<p>出现以下结果</p>
-<p><img src="http://img.blog.csdn.net/20170415170211580?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTEJpbmlu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<hr>
-<p>至此，Nginx安装结束</p>
-<p>参考资料：</p>
-<blockquote>
-<p><a href="http://www.cnblogs.com/hzh19870110/p/6100661.html" target="_blank" rel="external">http://www.cnblogs.com/hzh19870110/p/6100661.html</a> <em>作者：grhlove123</em></p>
-</blockquote>
-<h2 id="配置php-fpm"><a href="#配置php-fpm" class="headerlink" title="配置php-fpm"></a>配置php-fpm</h2><p>进入php的 <code>sbin</code> 目录下启动 <code>php-fpm</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd /usr/local/php7/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./php-fpm</span></div></pre></td></tr></table></figure>
-<p>（若提示没有权限，在命令前加上 <code>sudo</code> 即可。）</p>
-<p>发现提示下方信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[15-Apr-2017 17:06:21] ERROR: failed to open configuration file <span class="string">'/usr/local/php7/etc/php-fpm.conf'</span>: No such file or directory (2)</div><div class="line">[15-Apr-2017 17:06:21] ERROR: failed to load configuration file <span class="string">'/usr/local/php7/etc/php-fpm.conf'</span></div><div class="line">[15-Apr-2017 17:06:21] ERROR: FPM initialization failed</div></pre></td></tr></table></figure>
-<p>告诉我们在 <code>/usr/local/php7/etc/</code> 目录下没有找到 <code>php-fpm.conf</code> 配置文件。</p>
-<p>那我们进入对应文件夹查看文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># cd /usr/local/php7/etc/</span></div><div class="line">[root@iZ2844brz0xZ etc]<span class="comment"># ll</span></div></pre></td></tr></table></figure>
-<p>显示</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">total 16</div><div class="line">-rw-r--r-- 1 root root 1239 Apr 15 07:33 pear.conf</div><div class="line">-rw-r--r-- 1 root root 4468 Apr 15 07:33 php-fpm.conf.default</div><div class="line">drwxr-xr-x 2 root root 4096 Apr 15 07:33 php-fpm.d</div></pre></td></tr></table></figure>
-<p>发现 <code>php-fpm.conf</code> 多了一个 <code>default</code> 结尾，我们只需要把文件重新命名就好了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ etc]<span class="comment"># mv php-fpm.conf.default php-fpm.conf --利用mv移动命令更改名字</span></div></pre></td></tr></table></figure>
-<p>重新进入php的 <code>sbin</code> 目录下启动 <code>php-fpm</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ etc]<span class="comment"># cd /usr/local/php7/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./php-fpm</span></div></pre></td></tr></table></figure>
-<p>这时候提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[15-Apr-2017 17:08:23] WARNING: Nothing matches the include pattern <span class="string">'/usr/local/php7/etc/php-fpm.d/*.conf'</span> from /usr/<span class="built_in">local</span>/php7/etc/php-fpm.conf at line 125.</div><div class="line">[15-Apr-2017 17:08:23] ERROR: No pool defined. at least one pool section must be specified <span class="keyword">in</span> config file</div><div class="line">[15-Apr-2017 17:08:23] ERROR: failed to post process the configuration</div><div class="line">[15-Apr-2017 17:08:23] ERROR: FPM initialization failed</div></pre></td></tr></table></figure>
-<p>告诉我们在 <code>/usr/local/php7/etc/php-fpm.d/</code> 目录下没有找到 <code>.conf</code> 文件，问题出在125行，我们用vim编辑文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># vim /usr/local/php7/etc/php-fpm.conf</span></div></pre></td></tr></table></figure>
-<p>进入后输入命令 <code>:125</code> 跳转到125行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">include=/usr/local/php7/etc/php-fpm.d/*.conf</div></pre></td></tr></table></figure>
-<p>给我们的信息是要找 <code>php-fpm.d</code> 目录下的以 <code>.conf</code> 结尾的文件，输入<code>:q!</code> 退出，进入对应文件夹，查看文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># cd /usr/local/php7/etc/php-fpm.d/</span></div><div class="line">[root@iZ2844brz0xZ php-fpm.d]<span class="comment"># ll</span></div></pre></td></tr></table></figure>
-<p>发现以下文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">total 20</div><div class="line">-rw-r--r-- 1 root root 18521 Apr 15 07:33 www.conf.default</div></pre></td></tr></table></figure>
-<p>重命名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ php-fpm.d]<span class="comment"># mv www.conf.default www.conf</span></div></pre></td></tr></table></figure>
-<p>回到 <code>sbin</code> 目录下重新启动 <code>php-fpm</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ php-fpm.d]<span class="comment"># cd /usr/local/php7/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./php-fpm</span></div></pre></td></tr></table></figure>
-<p>若没有提示信息表明php-fpm启动成功啦~</p>
-<p>用以下命令查看fpm进程</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># ps aux | grep php-fpm</span></div></pre></td></tr></table></figure>
-<hr>
-<h2 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h2><p>进入Nginx目录，编辑 <code>nginx.conf</code> 配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ nginx]<span class="comment"># cd /usr/local/nginx/</span></div><div class="line">[root@iZ2844brz0xZ nginx]<span class="comment"># cd conf/</span></div><div class="line">[root@iZ2844brz0xZ conf]<span class="comment"># vim nginx.conf</span></div></pre></td></tr></table></figure>
-<p>看到 <code>server</code> 模块下有：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">            root   html;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<p>这段表示所有的文件都会进入html这个目录下，我们现在编写与php相关的语句</p>
-<p>在下面我们可以找到配置文件已经帮我们写好了我们只需要把前面的注释符号 <code>#</code> 去掉就好了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">location ~ \.php$ &#123;</div><div class="line">            root           html;</div><div class="line">            fastcgi_pass   127.0.0.1:9000;</div><div class="line">            fastcgi_index  index.php;</div><div class="line">            fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</div><div class="line">            include        fastcgi_params;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<p>输入<code>:wq</code> 保存退出</p>
-<p>进入nginx的<code>html</code> 目录，新建一个文件测试一下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ conf]<span class="comment"># cd ..</span></div><div class="line">[root@iZ2844brz0xZ nginx]<span class="comment"># cd html/</span></div><div class="line">[root@iZ2844brz0xZ html]<span class="comment"># vim test.php</span></div></pre></td></tr></table></figure>
-<p>输入</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">	phpinfo();</div></pre></td></tr></table></figure>
-<p>忘了说，修改完配置文件记得要重新启动nginx哦</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd /usr/local/nginx/sbin/</span></div><div class="line">[root@iZ2844brz0xZ sbin]<span class="comment"># ./nginx -s reload</span></div></pre></td></tr></table></figure>
-<p>打开网址，运行成功~</p>
-<hr>
-<h2 id="附："><a href="#附：" class="headerlink" title="附："></a>附：</h2><blockquote>
-<p><a href="https://segmentfault.com/a/1190000007322358" target="_blank" rel="external">Nginx和php-fpm的运行原理</a> <em>作者：zilu</em> （写的很棒~）</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Nginx安装：&quot;&gt;&lt;a href=&quot;#Nginx安装：&quot; class=&quot;headerlink&quot; title=&quot;Nginx安装：&quot;&gt;&lt;/a&gt;Nginx安装：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;下载解压安装&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;进入Nginx官网站 &lt;a href=&quot;http://nginx.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://nginx.org/&lt;/a&gt;，进入后选择最新的版本，进入页面后在 &lt;code&gt;Stable version&lt;/code&gt; 中选择 &lt;code&gt;nginx-*&lt;/code&gt; 右键复制链接，然后用 &lt;code&gt;wget&lt;/code&gt; 下载&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# wget http://nginx.org/download/nginx-1.12.0.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;如果提示wget命令未找到，则执行&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# sudo yum install wget&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;下载完用 &lt;code&gt;ll&lt;/code&gt; 命令查看刚刚下载获得的 &lt;code&gt;nginx-*.tar.gz&lt;/code&gt; 文件，用下面命令解压它&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# tar -zxvf nginx-1.12.0.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
