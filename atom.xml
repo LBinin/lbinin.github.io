@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2018-08-28T13:59:40.884Z</updated>
+  <updated>2018-08-28T14:03:12.819Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.lbinin.com/2018/08/28/react-lifecycle/"/>
     <id>http://www.lbinin.com/2018/08/28/react-lifecycle/</id>
     <published>2018-08-28T13:59:00.000Z</published>
-    <updated>2018-08-28T13:59:40.884Z</updated>
+    <updated>2018-08-28T14:03:12.819Z</updated>
     
     <content type="html"><![CDATA[<h2 id="无状态（stateless）组件"><a href="#无状态（stateless）组件" class="headerlink" title="无状态（stateless）组件"></a>无状态（stateless）组件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyButton = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My Button<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这种组件没有自己的独立状态，并且由于没有继承 <code>React.Component</code> 的缘故，所以获取组件的生命周期，也无法访问状态（state），但是依然能够传入属性（props），它们是作为函数的参数传入的。</p>
@@ -109,7 +109,7 @@
     
     </summary>
     
-      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="React" scheme="http://www.lbinin.com/categories/React/"/>
     
     
   </entry>
