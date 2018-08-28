@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2018-08-28T13:54:37.997Z</updated>
+  <updated>2018-08-28T13:59:40.884Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://www.lbinin.com/2018/08/26/react-lifecycle/"/>
-    <id>http://www.lbinin.com/2018/08/26/react-lifecycle/</id>
-    <published>2018-08-26T14:59:48.000Z</published>
-    <updated>2018-08-28T13:54:37.997Z</updated>
+    <title>React 生命周期</title>
+    <link href="http://www.lbinin.com/2018/08/28/react-lifecycle/"/>
+    <id>http://www.lbinin.com/2018/08/28/react-lifecycle/</id>
+    <published>2018-08-28T13:59:00.000Z</published>
+    <updated>2018-08-28T13:59:40.884Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="React-生命周期"><a href="#React-生命周期" class="headerlink" title="React 生命周期"></a>React 生命周期</h1><h2 id="无状态（stateless）组件"><a href="#无状态（stateless）组件" class="headerlink" title="无状态（stateless）组件"></a>无状态（stateless）组件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyButton = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My Button<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h2 id="无状态（stateless）组件"><a href="#无状态（stateless）组件" class="headerlink" title="无状态（stateless）组件"></a>无状态（stateless）组件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyButton = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My Button<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这种组件没有自己的独立状态，并且由于没有继承 <code>React.Component</code> 的缘故，所以获取组件的生命周期，也无法访问状态（state），但是依然能够传入属性（props），它们是作为函数的参数传入的。</p>
 <h2 id="代表什么？"><a href="#代表什么？" class="headerlink" title=" 代表什么？"></a><customeelement> 代表什么？</customeelement></h2><p>这是 JSX 语法，本质上是 <code>React.createElement(MyButton, null)</code> 的语法糖，实际返回的是 <code>CustomeElement</code> 类型的 React 元素（element）。</p>
 <p>React 元素本质上又是一个 Object 对象，这个对象由 <strong>key(id)</strong>、<strong>props(属性)</strong>、<strong>ref</strong>、<strong>type(元素类型)</strong> 四个属性组成。它代表的其实是虚拟 DOM（Virtual DOM）上的节点，是对你在页面上看到的每一个 DOM 节点的描述。</p>
@@ -96,19 +96,20 @@
 <ul>
 <li>死亡阶段：componentWillUnmount</li>
 </ul>
-<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><p><img src="/2018/08/26/react-lifecycle/094E3CDC-BE16-49D3-B6CC-3667E4FF8CC6.png" alt=""></p>
-<p><img src="/2018/08/26/react-lifecycle/B9D3BCF9-32D1-4A14-BB75-7E6436B12A07.png" alt=""></p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
-<p><a href="https://juejin.im/post/59fede45f265da430b7a9d9f" target="_blank" rel="external">深入React的生命周期(上)：出生阶段(Mount) - 掘金</a><br><a href="https://segmentfault.com/a/1190000004168886" target="_blank" rel="external">React：组件的生命周期 - 分享 - SegmentFault 思否</a><br><a href="https://juejin.im/post/5a062fb551882535cd4a4ce3" target="_blank" rel="external">图解ES6中的React生命周期 - 掘金</a><br><a href="http://www.runoob.com/react/react-component-life-cycle.html" target="_blank" rel="external">React 组件生命周期 | 菜鸟教程</a>  </p>
+<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><p><img src="/2018/08/28/react-lifecycle/094E3CDC-BE16-49D3-B6CC-3667E4FF8CC6.png" alt=""></p>
+<p><img src="/2018/08/28/react-lifecycle/B9D3BCF9-32D1-4A14-BB75-7E6436B12A07.png" alt=""></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<p><a href="https://juejin.im/post/59fede45f265da430b7a9d9f" target="_blank" rel="external">深入React的生命周期(上)：出生阶段(Mount) - 掘金</a><br><a href="https://segmentfault.com/a/1190000004168886" target="_blank" rel="external">React：组件的生命周期 - 分享 - SegmentFault 思否</a><br><a href="https://juejin.im/post/5a062fb551882535cd4a4ce3" target="_blank" rel="external">图解ES6中的React生命周期 - 掘金</a><br><a href="http://www.runoob.com/react/react-component-life-cycle.html" target="_blank" rel="external">React 组件生命周期 | 菜鸟教程</a></p>
 </blockquote>
-<p>#笔记/阅读笔记</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;React-生命周期&quot;&gt;&lt;a href=&quot;#React-生命周期&quot; class=&quot;headerlink&quot; title=&quot;React 生命周期&quot;&gt;&lt;/a&gt;React 生命周期&lt;/h1&gt;&lt;h2 id=&quot;无状态（stateless）组件&quot;&gt;&lt;a href=&quot;#无状态（s
+      &lt;h2 id=&quot;无状态（stateless）组件&quot;&gt;&lt;a href=&quot;#无状态（stateless）组件&quot; class=&quot;headerlink&quot; title=&quot;无状态（stateless）组件&quot;&gt;&lt;/a&gt;无状态（stateless）组件&lt;/h2&gt;&lt;figure class=&quot;hi
     
     </summary>
+    
+      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
   </entry>
