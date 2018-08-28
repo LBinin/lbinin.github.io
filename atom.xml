@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lbinin.com/"/>
-  <updated>2018-06-10T09:53:09.666Z</updated>
+  <updated>2018-08-28T13:54:37.997Z</updated>
   <id>http://www.lbinin.com/</id>
   
   <author>
@@ -14,6 +14,104 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.lbinin.com/2018/08/26/react-lifecycle/"/>
+    <id>http://www.lbinin.com/2018/08/26/react-lifecycle/</id>
+    <published>2018-08-26T14:59:48.000Z</published>
+    <updated>2018-08-28T13:54:37.997Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="React-生命周期"><a href="#React-生命周期" class="headerlink" title="React 生命周期"></a>React 生命周期</h1><h2 id="无状态（stateless）组件"><a href="#无状态（stateless）组件" class="headerlink" title="无状态（stateless）组件"></a>无状态（stateless）组件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyButton = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My Button<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种组件没有自己的独立状态，并且由于没有继承 <code>React.Component</code> 的缘故，所以获取组件的生命周期，也无法访问状态（state），但是依然能够传入属性（props），它们是作为函数的参数传入的。</p>
+<h2 id="代表什么？"><a href="#代表什么？" class="headerlink" title=" 代表什么？"></a><customeelement> 代表什么？</customeelement></h2><p>这是 JSX 语法，本质上是 <code>React.createElement(MyButton, null)</code> 的语法糖，实际返回的是 <code>CustomeElement</code> 类型的 React 元素（element）。</p>
+<p>React 元素本质上又是一个 Object 对象，这个对象由 <strong>key(id)</strong>、<strong>props(属性)</strong>、<strong>ref</strong>、<strong>type(元素类型)</strong> 四个属性组成。它代表的其实是虚拟 DOM（Virtual DOM）上的节点，是对你在页面上看到的每一个 DOM 节点的描述。</p>
+<h2 id="生成一个-React-元素后会触发生命周期吗？"><a href="#生成一个-React-元素后会触发生命周期吗？" class="headerlink" title="生成一个 React 元素后会触发生命周期吗？"></a>生成一个 React 元素后会触发生命周期吗？</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> MyButton <span class="keyword">from</span> <span class="string">'./Button'</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">const</span> button = <span class="xml"><span class="tag">&lt;<span class="name">MyButton</span> /&gt;</span></span></div><div class="line">    return <span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span>;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>上面的 <code>&lt;MyButton /&gt;</code>，仅仅是被声明了，但是并不会被触发生命周期。真正的生命周期开始于组件被渲染至页面中。</p>
+<h2 id="getDefaultProps-amp-getInitialState"><a href="#getDefaultProps-amp-getInitialState" class="headerlink" title="getDefaultProps &amp; getInitialState"></a>getDefaultProps &amp; getInitialState</h2><p>在 <code>constructor</code> 构造函数之后的周期函数并不是 <code>componentWillMount</code>，而是 <code>getDefaultProps</code> 和 <code>getInitialState</code>。<br><strong>getDefaultPops</strong> 是对于组件类来说只调用一次。<br><strong>getInitialState</strong> 是对于每个组件实例来讲都会调用，并且只调一次。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var Hello = React.creatClass(&#123;</div><div class="line">    getDefaultProps: function()&#123;</div><div class="line">        return &#123; name: 'lbinin', git: 'LBinin' &#125;</div><div class="line">    &#125;,</div><div class="line">    getInitialState: function() &#123;</div><div class="line">      return &#123;liked: false&#125;;</div><div class="line">  	  &#125;,</div><div class="line">	  handleClick: function(event) &#123;</div><div class="line">      this.setState(&#123;liked: !this.state.liked&#125;);</div><div class="line">    &#125;,</div><div class="line">    render: function()&#123;</div><div class="line">		  var text = this.state.liked ? 'like' : 'haven\'t liked';</div><div class="line">        return (</div><div class="line">            &lt;div&gt;Hello,&#123;this.props.name&#125;,git username is &#123;this.props.git&#125;&lt;/div&gt;</div><div class="line">			  &lt;p onClick=&#123;this.handleClick&#125;&gt; You &#123;text&#125; this. Click to toggle. &lt;/p&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="componentWillMount-void"><a href="#componentWillMount-void" class="headerlink" title="componentWillMount(): void"></a>componentWillMount(): void</h2><blockquote>
+<p><em>特点：state 和 props 都已配置完毕，可通过 this.state 和 this.props 访问。且在 render 之前调用，render 前修改 state 的最后一次机会，且不会触发二次 render。</em>  </p>
+</blockquote>
+<p><code>componentWillMount</code> 函数在第一次 <code>render</code> 之前被调用，并且只会被调用<strong>一次</strong>。</p>
+<p>当组件进入到这个生命周期中时，所有的 <code>state</code> 和 <code>props</code> 已经配置完毕，我们可以通过 <code>this.props</code> 和 <code>this.state</code> 访问它们，也可以通过 <code>setState</code> 重新设置状态。</p>
+<p>由于该方法是在 render 函数之前调用，也是在 render 方法调用之前修改 state 的最后一次机会。之后的 render 函数可以看到更新后的 state，并且只会渲染一次。</p>
+<p>推荐在这个生命周期函数里进行状态初始化的处理，可以进行开启定时器、向服务器发送请求等操作，为下一步 <code>render</code> 做准备。</p>
+<h2 id="componentDidMount-void"><a href="#componentDidMount-void" class="headerlink" title="componentDidMount(): void"></a>componentDidMount(): void</h2><blockquote>
+<p><em>特点：此时页面中已有真正的 DOM 元素，可以进行相关 DOM 操作。</em>  </p>
+</blockquote>
+<p><code>componentDidMount</code> 在组件已经被渲染到页面中后触发，此时页面中有了真正的 DOM 的元素，可以进行 DOM 相关的操作。</p>
+<p>此时不仅仅能够访问当前组件的 DOM，还能够访问当前组件<strong>子组件</strong>的原生 DOM 元素。这时候我们可以使用 <code>ref</code> 属性配合 <code>ReactDOM.findDOMNode(ref)</code> 访问到真实 DOM。</p>
+<p>正是因为能够访问原生 DOM 的缘故，你可能会在 <code>componentDidMount</code> 函数中重新对元素的样式进行计算，调整然后生效。因此立即需要对 DOM 进行重新渲染，此时会使用到 <code>forceUpdate</code> 方法。<a href="https://react-cn.github.io/react/docs/component-api.html#forceupdate" target="_blank" rel="external">组件 API | React #forceUpdate</a></p>
+<p>正因为我们能在这个函数中访问原生 DOM，所以在这个函数中通常会做一些第三方类库初始化的工具，包括异步加载数据。</p>
+<p>🌰 举个例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</div><div class="line"><span class="keyword">import</span> c3 <span class="keyword">from</span> <span class="string">'c3'</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Chart</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">this</span>.chart = c3.generate(&#123;</div><div class="line">      <span class="attr">bindto</span>: ReactDOM.findDOMNode(<span class="keyword">this</span>.refs.chart),</div><div class="line">      <span class="attr">data</span>: &#123;</div><div class="line">        <span class="attr">columns</span>: [</div><div class="line">          [<span class="string">'data1'</span>, <span class="number">30</span>, <span class="number">200</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">150</span>, <span class="number">250</span>],</div><div class="line">          [<span class="string">'data2'</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">10</span>, <span class="number">40</span>, <span class="number">15</span>, <span class="number">25</span>]</div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">"chart"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p>接下来说说「更新阶段」~<br>先看看哪些场景会触发 React 的更新阶段：</p>
+<ul>
+<li><strong>父级组件更改了 props</strong></li>
+<li><strong>组件内部 state 发生变化</strong></li>
+<li><strong>调用 forceUpdate</strong>（不推荐）</li>
+</ul>
+<h2 id="componentWillReceiveProps-nextProps-void"><a href="#componentWillReceiveProps-nextProps-void" class="headerlink" title="componentWillReceiveProps(nextProps): void"></a>componentWillReceiveProps(nextProps): void</h2><blockquote>
+<p><em>特点：在该阶段可以获取到未发生改变的 props(this.props) 和发生了变化的 props(nextProps) 以进行对比，在该阶段改变 state 不会触发二次渲染。</em>  </p>
+</blockquote>
+<p>当传递给组件的 props 发生变化的时候，<code>componentWillReceiveProps</code> 将会被调用。它的参数是发生改变后的 props（也就是 nextProps）。在该阶段中，我们依然能够通过 <code>this.props</code> 获取到未发生变化的 props。</p>
+<p>若在该阶段调用 <code>setState()</code> 改变 state，是不会触发再一次的 render 的。</p>
+<p>虽然 props 的更改会引起 componentWillReceiveProps 的调用，但 componentWillReceiveProps 的调用并不意味着 props 真的发生了变化。参考链接：<a href="https://reactjs.org/blog/2016/01/08/A-implies-B-does-not-imply-B-implies-A.html" target="_blank" rel="external">(A =&gt; B) !=&gt; (B =&gt; A) – React Blog</a><br>原因是旧的 props 和新 props 的实际上是相同的物理对象（只有对象的内部值发生了变化）。由于引用是全等的（===），所以进行相等检查并不会告诉我们值是否已更改。唯一可行的解​​决方案是创建数据的深层副本，然后进行深度比较；但对于大型数据结构（尤其是具有循环引用的数据结构），这可能会非常昂贵。<br>这样一来，React 无法知道 props 是否发生改变，这种情况下 React 会调用 <code>componentWillReceiveProps</code> 去检查 props 并采取相应的行动。</p>
+<p>所以在这一阶段，我们可能需要对 props 做一个判断。</p>
+<h2 id="shouldComponentUpdate-nextProps-nextState-boolean"><a href="#shouldComponentUpdate-nextProps-nextState-boolean" class="headerlink" title="shouldComponentUpdate(nextProps, nextState): boolean"></a>shouldComponentUpdate(nextProps, nextState): boolean</h2><blockquote>
+<p><em>特点：在该阶段可以获取到改变和未改变的 state 和 props，可以控制生命周期是否继续，是性能优化的关键点。</em>  </p>
+</blockquote>
+<p><code>shouldComponentUpdate</code> 决定了是否继续当前的生命周期。它非常重要，也是我们在写 React 性能优化转折点。<br>阶段内返回一个布尔值，返回 <code>true</code> 表示继续当前的生命周期，返回 <code>false</code> 表示终止当前的生命周期，也会阻止进一步的 render 与接下来的步骤。</p>
+<p>在该阶段，可以通过 <code>this.state</code> 和 <code>this.props</code> 获取到未发生改变的 state 和 props，可以通过参数 <code>nextProps</code> 和 <code>nextState</code> 获取到发生了变化的 state 和 props。</p>
+<h2 id="componentWillUpdate-nextProps-nextState-void"><a href="#componentWillUpdate-nextProps-nextState-void" class="headerlink" title="componentWillUpdate(nextProps, nextState): void"></a>componentWillUpdate(nextProps, nextState): void</h2><blockquote>
+<p><em>特点：和 componentWillMount 类似；此时可以获取到改变了和未改变的 state 和 props。</em>  </p>
+</blockquote>
+<p><code>componentWillUpdate</code> 在这个阶段与 <code>componentWillMount</code> 不同的是，这个阶段需要注意 <code>setState</code> 的使用，没有条件的去 setState 将会触发另一轮的 render，导致无限渲染。</p>
+<h2 id="componentDidUpdate-prevProps-prevState-void"><a href="#componentDidUpdate-prevProps-prevState-void" class="headerlink" title="componentDidUpdate(prevProps, prevState): void"></a>componentDidUpdate(prevProps, prevState): void</h2><blockquote>
+<p><em>特点：和 componentDidMount 类似，此时页面中最新的 DOM 元素已经渲染完成，可以进行相关 DOM 操作。</em>  </p>
+</blockquote>
+<p>当组件进入 componentDidUpdate 阶段时意味着最新的原生 DOM 已经渲染完成并且可以通过 refs 进行访问。</p>
+<p>和 componentDidMount 非常类似，子组件的 componentDidUpdate 会优先于父组件调用。</p>
+<p>❗️在该阶段需要注意的是，如果在该阶段中修改了 state，并且默认情况下 <code>shouldComponentUpdate</code> 函数总是返回 <strong>true</strong> 的话，那么将会发生「无限 render」的情况。<br>所以如果你必须这么做，那么你应该把上一次的结果缓存起来，进行有条件的更新 state：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">componentDidUpdate(prevProps, prevState) &#123;</div><div class="line">	<span class="keyword">let</span> height = ReactDOM.findDOMNode(<span class="keyword">this</span>).offsetHeight;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.state.height !== height ) &#123;</div><div class="line">    <span class="keyword">this</span>.setState(&#123; <span class="attr">internalHeight</span>: height &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p>接下来说说「死亡阶段」</p>
+<h2 id="componentWillUnmount-void"><a href="#componentWillUnmount-void" class="headerlink" title="componentWillUnmount(): void"></a>componentWillUnmount(): void</h2><p>当组件需要从DOM中移除时，即会触发 <code>componentWillUnmount</code> 钩子函数。</p>
+<p>在这个函数中通常会做一些「清理」相关的工作，如：</p>
+<ul>
+<li>将已经发送的网络请求都取消掉</li>
+<li>移除组件上 DOM 的 Event Listener</li>
+<li>dispose 掉 mobx 的 reaction 等</li>
+</ul>
+<h2 id="顺序"><a href="#顺序" class="headerlink" title="顺序"></a>顺序</h2><ul>
+<li>首次被创建时：constructor -&gt; getDefaultProps 与 getInitialState -&gt; componentWillMount -&gt; render -&gt; componentDidMount。</li>
+<li>当组件内存在子组件时的 componentWillMount 和 render 的调用顺序：先父组件及父组件同级组件，然后才是子组件，以此类推。因为当渲染父组件时，也需要立即开始渲染子组件，所以子组件的生命周期开始于父组件之后。</li>
+<li>当组件内存在子组件时的 componentDidMount 的调用顺序：先子组件，然后才是父组件，以此类推。因为父组件想要渲染完毕，那么前提是它的子组件渲染完毕，也所以子组件的 componentDidMount 在父组件之前调用。</li>
+</ul>
+<hr>
+<ul>
+<li>更新阶段：componentWillReceiveProps -&gt; shouldComponentUpdate -&gt; componentWillUpdate -&gt; render -&gt; componentDidUpdate</li>
+</ul>
+<hr>
+<ul>
+<li>死亡阶段：componentWillUnmount</li>
+</ul>
+<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><p><img src="/2018/08/26/react-lifecycle/094E3CDC-BE16-49D3-B6CC-3667E4FF8CC6.png" alt=""></p>
+<p><img src="/2018/08/26/react-lifecycle/B9D3BCF9-32D1-4A14-BB75-7E6436B12A07.png" alt=""></p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
+<p><a href="https://juejin.im/post/59fede45f265da430b7a9d9f" target="_blank" rel="external">深入React的生命周期(上)：出生阶段(Mount) - 掘金</a><br><a href="https://segmentfault.com/a/1190000004168886" target="_blank" rel="external">React：组件的生命周期 - 分享 - SegmentFault 思否</a><br><a href="https://juejin.im/post/5a062fb551882535cd4a4ce3" target="_blank" rel="external">图解ES6中的React生命周期 - 掘金</a><br><a href="http://www.runoob.com/react/react-component-life-cycle.html" target="_blank" rel="external">React 组件生命周期 | 菜鸟教程</a>  </p>
+</blockquote>
+<p>#笔记/阅读笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;React-生命周期&quot;&gt;&lt;a href=&quot;#React-生命周期&quot; class=&quot;headerlink&quot; title=&quot;React 生命周期&quot;&gt;&lt;/a&gt;React 生命周期&lt;/h1&gt;&lt;h2 id=&quot;无状态（stateless）组件&quot;&gt;&lt;a href=&quot;#无状态（s
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Normalize.css</title>
@@ -1192,42 +1290,6 @@
     </summary>
     
       <category term="Mac" scheme="http://www.lbinin.com/categories/Mac/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>配置服务器 —— 安装PhpMyAdmin</title>
-    <link href="http://www.lbinin.com/2017/04/16/server-phpmyadmin/"/>
-    <id>http://www.lbinin.com/2017/04/16/server-phpmyadmin/</id>
-    <published>2017-04-16T09:26:00.000Z</published>
-    <updated>2017-05-02T07:15:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先访问phpmyadmin官网首页 <a href="http://www.phpmyadmin.net/" target="_blank" rel="external">http://www.phpmyadmin.net/</a></p>
-<p>进入之后点击 <strong><code>导航栏</code></strong> 的 <code>Download</code> 链接，进入下载界面，右键复制 <code>phpMyAdmin-*-all-languages.tar.gz</code> 的链接，用wget下载</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># wget https://files.phpmyadmin.net/phpMyAdmin/4.7.0/phpMyAdmin-4.7.0-all-languages.tar.gz</span></div></pre></td></tr></table></figure>
-<p>下载完成后解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># tar -zvxf phpMyAdmin-4.7.0-all-languages.tar.gz</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>解压完得到文件夹 <code>phpMyAdmin-4.7.0-all-languages</code>，将其移动到网站根目录并更名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># mv phpMyAdmin-4.7.0-all-languages /usr/local/nginx/html/</span></div><div class="line">[root@iZ2844brz0xZ ~]<span class="comment"># cd /usr/local/nginx/html/</span></div><div class="line">[root@iZ2844brz0xZ html]<span class="comment"># mv phpMyAdmin-4.7.0-all-languages phpmyAdmin</span></div></pre></td></tr></table></figure>
-<p>然后执行 <code>cd phpmyAdmin</code> 进入安装目录，这时候可以看到目录下有一个配置文件：<code>config.sample.inc.php</code>，拷贝这个文件并编辑：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@iZ2844brz0xZ phpmyAdmin]<span class="comment"># cp config.sample.inc.php config.inc.php</span></div><div class="line">[root@iZ2844brz0xZ phpmyAdmin]<span class="comment"># vim config.inc.php</span></div></pre></td></tr></table></figure>
-<p><code>$cfg[&#39;blowfish_secret&#39;]</code> 配置项，后面默认为空，这里我们可以随便设置一个复杂的字符串，用来加密使用</p>
-<p><code>$cfg[&#39;Servers&#39;][$i][&#39;host&#39;]</code> 设置为 <code>127.0.0.1</code>。建议设置成IP地址，则无论是本地还是远程只要mysql授权都没有问题，默认localhost可能会出现<code>#2002 - Permission denied — The server is not responding</code> 错误</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;首先访问phpmyadmin官网首页 &lt;a href=&quot;http://www.phpmyadmin.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.phpmyadmin.net/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;进入之后点击 &lt;strong&gt;&lt;code&gt;导航栏&lt;/code&gt;&lt;/strong&gt; 的 &lt;code&gt;Download&lt;/code&gt; 链接，进入下载界面，右键复制 &lt;code&gt;phpMyAdmin-*-all-languages.tar.gz&lt;/code&gt; 的链接，用wget下载&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# wget https://files.phpmyadmin.net/phpMyAdmin/4.7.0/phpMyAdmin-4.7.0-all-languages.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;下载完成后解压&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ2844brz0xZ ~]&lt;span class=&quot;comment&quot;&gt;# tar -zvxf phpMyAdmin-4.7.0-all-languages.tar.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://www.lbinin.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
   </entry>
